@@ -61,6 +61,107 @@ if (form && status) {
   });
 }
 
+// ── Storyline mock interaction preview ───────
+const storylineButtons = document.querySelectorAll("[data-storyline-choice]");
+const storylineFeedback = document.getElementById("storyline-mock-feedback");
+const storylineStages = document.querySelectorAll("[data-storyline-stage]");
+const storylineTitle = document.getElementById("storyline-mock-title");
+const storylineDescription = document.getElementById(
+  "storyline-mock-description",
+);
+const storylineChoicesWrap = document.querySelector(".storyline-mock__choices");
+
+if (
+  storylineButtons.length &&
+  storylineFeedback &&
+  storylineStages.length &&
+  storylineTitle &&
+  storylineDescription &&
+  storylineChoicesWrap
+) {
+  const stageCopy = {
+    1: {
+      title: "Customer Exception Request",
+      description:
+        "A customer asks for policy bypass. Start in Context, then move to Decision.",
+      showChoices: false,
+      feedback:
+        "Context stage: review the situation first, then open Decision to choose an action.",
+      tone: "",
+    },
+    2: {
+      title: "Decision",
+      description:
+        "Now choose a response path. Your selection will move to Feedback automatically.",
+      showChoices: true,
+      feedback: "Decision stage: select one option to see coaching feedback.",
+      tone: "",
+    },
+    3: {
+      title: "Feedback",
+      description:
+        "Review the consequence and coaching note. You can return to Decision to try again.",
+      showChoices: false,
+      feedback:
+        "Feedback stage: this is where Storyline delivers immediate coaching based on learner action.",
+      tone: "",
+    },
+  };
+
+  const storylineMessages = {
+    safe: "Correct path. Escalating keeps policy intact and gives the learner guided support before action.",
+    risk: "Risk path selected. Quick approval can create compliance issues and rework. Consider escalation first.",
+  };
+
+  const setStorylineStage = (stage, preserveFeedback = false) => {
+    const nextStage = String(stage);
+    const config = stageCopy[nextStage] || stageCopy[1];
+
+    storylineStages.forEach((item) => {
+      item.classList.toggle(
+        "active",
+        item.getAttribute("data-storyline-stage") === nextStage,
+      );
+    });
+
+    storylineTitle.textContent = config.title;
+    storylineDescription.textContent = config.description;
+    storylineChoicesWrap.style.display = config.showChoices ? "grid" : "none";
+
+    if (!preserveFeedback) {
+      storylineFeedback.classList.remove("safe", "risk");
+      storylineFeedback.textContent = config.feedback;
+    }
+  };
+
+  storylineStages.forEach((stageButton) => {
+    stageButton.addEventListener("click", () => {
+      const stage = stageButton.getAttribute("data-storyline-stage") || "1";
+      setStorylineStage(stage);
+    });
+  });
+
+  storylineButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const choice = button.getAttribute("data-storyline-choice") || "risk";
+
+      storylineButtons.forEach((item) => {
+        item.classList.remove("is-selected");
+      });
+      button.classList.add("is-selected");
+
+      storylineFeedback.classList.remove("safe", "risk");
+      storylineFeedback.classList.add(choice);
+      storylineFeedback.textContent = storylineMessages[choice];
+
+      // Move to Feedback stage once the learner makes a decision.
+      setStorylineStage("3", true);
+    });
+  });
+
+  setStorylineStage("1");
+}
+
 const scenarioButtons = document.querySelectorAll(".scenario-btn");
 const scenarioFeedback = document.getElementById("scenario-feedback");
 

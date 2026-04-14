@@ -679,14 +679,34 @@ footer a {
   gap: 0.45rem;
 }
 
-.storyline-mock__sidebar span {
+.storyline-mock__sidebar button {
+  appearance: none;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: left;
+  font-size: 0.76rem;
+  color: #4d647b;
+  padding: 0.25rem 0.35rem;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.storyline-mock__sidebar button:hover {
+  background: #dbeaf8;
+}
+
+.storyline-mock__sidebar span,
+.storyline-mock__sidebar button {
   font-size: 0.76rem;
   color: #4d647b;
 }
 
-.storyline-mock__sidebar span.active {
+.storyline-mock__sidebar span.active,
+.storyline-mock__sidebar button.active {
   color: #0f3555;
   font-weight: 700;
+  background: #d2e4f5;
+  border-color: #b7d1e7;
 }
 
 .storyline-mock__content {

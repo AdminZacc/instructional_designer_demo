@@ -125,14 +125,20 @@
 
               <div class="storyline-mock__body">
                 <div class="storyline-mock__sidebar">
-                  <span class="active">1. Context</span>
-                  <span>2. Decision</span>
-                  <span>3. Feedback</span>
+                  <button type="button" class="active" data-storyline-stage="1">
+                    1. Context
+                  </button>
+                  <button type="button" data-storyline-stage="2">
+                    2. Decision
+                  </button>
+                  <button type="button" data-storyline-stage="3">
+                    3. Feedback
+                  </button>
                 </div>
 
                 <div class="storyline-mock__content">
-                  <h4>Customer Exception Request</h4>
-                  <p>
+                  <h4 id="storyline-mock-title">Customer Exception Request</h4>
+                  <p id="storyline-mock-description">
                     A customer asks for policy bypass. Choose the safest
                     response.
                   </p>
