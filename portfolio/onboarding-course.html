@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Onboarding Course | Your Name</title>
+    <title>Onboarding Course | Zacchaeus Elliott</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -145,15 +145,33 @@
           <div class="branch-map" aria-label="Branching architecture map">
             <p class="branch-map__title">Decision Architecture Preview</p>
             <div class="branch-map__lane">
-              <div class="branch-node branch-node--start">Start</div>
+              <button
+                class="branch-node branch-node--start"
+                type="button"
+                data-jump-scene="1"
+              >
+                Start
+              </button>
               <div class="branch-connector" aria-hidden="true"></div>
-              <div class="branch-node">Scene 1</div>
+              <button class="branch-node" type="button" data-jump-scene="1">
+                Scene 1
+              </button>
               <div class="branch-connector" aria-hidden="true"></div>
-              <div class="branch-node">Scene 2</div>
+              <button class="branch-node" type="button" data-jump-scene="2">
+                Scene 2
+              </button>
               <div class="branch-connector" aria-hidden="true"></div>
-              <div class="branch-node">Scene 3</div>
+              <button class="branch-node" type="button" data-jump-scene="3">
+                Scene 3
+              </button>
               <div class="branch-connector" aria-hidden="true"></div>
-              <div class="branch-node branch-node--result">Outcome</div>
+              <button
+                class="branch-node branch-node--result"
+                type="button"
+                data-jump-scene="result"
+              >
+                Outcome
+              </button>
             </div>
 
             <div class="branch-map__legend">

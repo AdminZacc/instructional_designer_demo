@@ -122,6 +122,7 @@ if (branchingModule) {
   const stepIndicators = branchingModule.querySelectorAll(
     "[data-step-indicator]",
   );
+  const mapNodes = document.querySelectorAll(".branch-node[data-jump-scene]");
   const progressBar = document.getElementById("branching-progress-bar");
   const resultBox = document.getElementById("branch-result");
   const restartButton = document.getElementById("branch-restart");
@@ -157,6 +158,11 @@ if (branchingModule) {
       if (stepNumber === currentStep) {
         indicator.classList.add("active");
       }
+    });
+
+    mapNodes.forEach((node) => {
+      const target = node.getAttribute("data-jump-scene");
+      node.classList.toggle("active", target === String(currentStep));
     });
   };
 
@@ -213,6 +219,28 @@ if (branchingModule) {
       showScene(1);
       resultBox.classList.remove("success", "partial", "retry");
       resultBox.textContent = "Reviewing your path...";
+    });
+  }
+
+  if (mapNodes.length) {
+    mapNodes.forEach((node) => {
+      node.addEventListener("click", () => {
+        const jumpTarget = node.getAttribute("data-jump-scene") || "1";
+        state.step = jumpTarget === "result" ? "result" : Number(jumpTarget);
+
+        if (state.step === "result") {
+          resultBox.classList.remove("success", "partial", "retry");
+          resultBox.classList.add("demo");
+          resultBox.textContent =
+            "Demo mode: this is the outcome screen preview. Complete the scenario choices to generate a scored coaching result.";
+        } else {
+          resultBox.classList.remove("success", "partial", "retry", "demo");
+          resultBox.textContent = "Reviewing your path...";
+        }
+
+        updateProgress();
+        showScene(state.step);
+      });
     });
   }
 

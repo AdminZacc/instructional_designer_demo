@@ -710,6 +710,7 @@ footer a {
 }
 
 .branch-node {
+  appearance: none;
   border: 1px solid #bdd4e8;
   border-radius: 999px;
   background: #ffffff;
@@ -717,6 +718,17 @@ footer a {
   font-size: 0.82rem;
   font-weight: 700;
   padding: 0.3rem 0.65rem;
+  cursor: pointer;
+}
+
+.branch-node:hover {
+  background: #ecf7ff;
+}
+
+.branch-node.active {
+  background: #0e7490;
+  border-color: #0e7490;
+  color: #ffffff;
 }
 
 .branch-node--start {
@@ -886,6 +898,11 @@ footer a {
 .branch-result.retry {
   background: #fdecee;
   color: #8a1f2d;
+}
+
+.branch-result.demo {
+  background: #e8f3ff;
+  color: #0f3555;
 }
 
 /* =============================================
