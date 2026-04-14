@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Your Name — Instructional Designer</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Your Name</a>
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container">
+        <p class="hero__subtitle">Instructional Designer</p>
+        <h1>Designing Learning <br />That Sticks</h1>
+        <p class="hero__tagline">
+          I create engaging, evidence-based learning experiences that empower
+          people to grow, perform, and thrive.
+        </p>
+        <a href="portfolio.html" class="btn btn--primary">View My Work</a>
+      </div>
+    </section>
+
+    <main>
+      <div class="container">
+        <!-- What I Do -->
+        <section class="section">
+          <h2 class="section__title">What I Do</h2>
+          <div class="section__divider"></div>
+          <div class="card-grid">
+            <div class="card">
+              <div class="card__tag">eLearning</div>
+              <h3>eLearning Development</h3>
+              <p>
+                Interactive courses built in Articulate Storyline and Rise that
+                learners actually want to finish.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__tag">Curriculum</div>
+              <h3>Curriculum Design</h3>
+              <p>
+                End-to-end course blueprints grounded in ADDIE, SAM, and
+                backwards design principles.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__tag">Facilitation</div>
+              <h3>Instructor-Led Training</h3>
+              <p>
+                Facilitator guides, slide decks, and activities for live virtual
+                and in-person sessions.
+              </p>
+            </div>
+            <div class="card">
+              <div class="card__tag">Assessment</div>
+              <h3>Assessment &amp; Evaluation</h3>
+              <p>
+                Kirkpatrick-aligned assessments and data strategies that prove
+                learning impact.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Strip -->
+        <section class="section" style="text-align: center; padding: 2rem 0">
+          <h2 style="margin-bottom: 0.75rem">Ready to collaborate?</h2>
+          <p style="color: var(--color-muted); margin-bottom: 1.5rem">
+            I'm open to freelance projects, contract roles, and full-time
+            opportunities.
+          </p>
+          <a href="contact.html" class="btn btn--outline">Get In Touch</a>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

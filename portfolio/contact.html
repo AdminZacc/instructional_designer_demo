@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Your Name — Instructional Designer</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Your Name</a>
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <section class="section">
+          <h1 class="section__title">Get In Touch</h1>
+          <div class="section__divider"></div>
+
+          <div class="contact-layout">
+            <!-- Contact info -->
+            <div class="contact-info">
+              <p>
+                Whether you have a project in mind, want to discuss a role, or
+                just want to connect — I'd love to hear from you. Fill out the
+                form or reach out directly.
+              </p>
+
+              <ul class="contact-links">
+                <li>
+                  <span>📧</span>
+                  <a href="mailto:you@example.com">you@example.com</a>
+                </li>
+                <li>
+                  <span>💼</span>
+                  <a
+                    href="https://linkedin.com/in/yourhandle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    linkedin.com/in/yourhandle
+                  </a>
+                </li>
+                <li>
+                  <span>📍</span>
+                  City, State (Open to remote)
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact form -->
+            <!-- NOTE: This form requires a backend or service (e.g. Formspree, Netlify Forms)
+               to actually send email. Replace the action URL below. -->
+            <form
+              id="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              novalidate
+            >
+              <div class="form-group">
+                <label for="name">Name <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="Jane Smith"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email"
+                  >Email <span aria-hidden="true">*</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  autocomplete="email"
+                  placeholder="jane@example.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Project inquiry / Collaboration / Other"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message"
+                  >Message <span aria-hidden="true">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Tell me about your project or question…"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primary">
+                Send Message
+              </button>
+
+              <p class="form-status" id="form-status" role="alert"></p>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
