@@ -142,6 +142,32 @@
           <h2 class="section__title">Branching Scene Simulator</h2>
           <div class="section__divider"></div>
 
+          <div class="branch-map" aria-label="Branching architecture map">
+            <p class="branch-map__title">Decision Architecture Preview</p>
+            <div class="branch-map__lane">
+              <div class="branch-node branch-node--start">Start</div>
+              <div class="branch-connector" aria-hidden="true"></div>
+              <div class="branch-node">Scene 1</div>
+              <div class="branch-connector" aria-hidden="true"></div>
+              <div class="branch-node">Scene 2</div>
+              <div class="branch-connector" aria-hidden="true"></div>
+              <div class="branch-node">Scene 3</div>
+              <div class="branch-connector" aria-hidden="true"></div>
+              <div class="branch-node branch-node--result">Outcome</div>
+            </div>
+
+            <div class="branch-map__legend">
+              <span
+                ><i class="branch-dot branch-dot--safe"></i> Safe path choices
+                reinforce policy and retention</span
+              >
+              <span
+                ><i class="branch-dot branch-dot--risky"></i> Risk path choices
+                trigger corrective coaching</span
+              >
+            </div>
+          </div>
+
           <div class="branching-module" id="branching-module">
             <div class="branching-head">
               <p class="branching-label">Scenario Progress</p>

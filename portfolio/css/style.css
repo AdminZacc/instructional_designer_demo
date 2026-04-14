@@ -686,6 +686,79 @@ footer a {
   padding-top: 0.5rem;
 }
 
+.branch-map {
+  border: 1px solid #d8e5f3;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f7fbff, #ffffff);
+  padding: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.branch-map__title {
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #0f3555;
+  margin-bottom: 0.65rem;
+}
+
+.branch-map__lane {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.branch-node {
+  border: 1px solid #bdd4e8;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #123b5d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+}
+
+.branch-node--start {
+  background: #e8f6ff;
+}
+
+.branch-node--result {
+  background: #edfdf3;
+  border-color: #9ad8b0;
+  color: #14532d;
+}
+
+.branch-connector {
+  width: 24px;
+  height: 2px;
+  background: #9eb7cf;
+}
+
+.branch-map__legend {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.84rem;
+  color: #37516a;
+}
+
+.branch-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.35rem;
+}
+
+.branch-dot--safe {
+  background: #14b8a6;
+}
+
+.branch-dot--risky {
+  background: #ef4444;
+}
+
 .branching-module {
   border: 1px solid #cbdcef;
   border-radius: 14px;
@@ -855,5 +928,9 @@ footer a {
 
   .branching-module {
     padding: 0.85rem;
+  }
+
+  .branch-connector {
+    width: 16px;
   }
 }
