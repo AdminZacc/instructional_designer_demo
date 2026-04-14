@@ -61,30 +61,6 @@ if (form && status) {
   });
 }
 
-// ── Onboarding project interactions ───────────
-const toolTabs = document.querySelectorAll(".tool-tab");
-const toolPanels = document.querySelectorAll(".tool-panel");
-
-if (toolTabs.length && toolPanels.length) {
-  toolTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const target = tab.getAttribute("data-tab");
-
-      toolTabs.forEach((item) => {
-        item.classList.remove("active");
-        item.setAttribute("aria-selected", "false");
-      });
-
-      toolPanels.forEach((panel) => {
-        panel.classList.toggle("active", panel.id === target);
-      });
-
-      tab.classList.add("active");
-      tab.setAttribute("aria-selected", "true");
-    });
-  });
-}
-
 const scenarioButtons = document.querySelectorAll(".scenario-btn");
 const scenarioFeedback = document.getElementById("scenario-feedback");
 

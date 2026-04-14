@@ -30,17 +30,31 @@
     <main>
       <div class="container">
         <section class="project-hero">
-          <p class="project-hero__eyebrow">Flagship eLearning Case Study</p>
-          <h1>Onboarding Course - New Employee Orientation</h1>
-          <p class="project-hero__summary">
-            A 25-minute module designed to reduce time-to-productivity for new
-            hires through branching scenarios, immediate feedback, and visual
-            microlearning.
-          </p>
-          <div class="project-meta">
-            <span>Tools: Articulate Storyline, Canva</span>
-            <span>Audience: New employees</span>
-            <span>Format: Self-paced</span>
+          <div class="project-hero__content">
+            <p class="project-hero__eyebrow">Flagship eLearning Case Study</p>
+            <h1>Onboarding Course - New Employee Orientation</h1>
+            <p class="project-hero__summary">
+              A 25-minute module designed to reduce time-to-productivity for
+              new hires through branching scenarios, immediate feedback, and
+              visual microlearning.
+            </p>
+            <div class="project-meta">
+              <span>Tools: Articulate Storyline, Canva</span>
+              <span>Audience: New employees</span>
+              <span>Format: Self-paced</span>
+            </div>
+          </div>
+
+          <figure class="project-hero__card">
+            <img
+              src="../img/pexels-tima-miroshnichenko-5303559.jpg"
+              alt="Onboarding visual used in the project hero"
+              class="project-hero__image"
+            />
+            <figcaption class="project-hero__caption">
+              Featured visual for the onboarding module experience.
+            </figcaption>
+          </figure>
           </div>
         </section>
 
@@ -74,34 +88,18 @@
         </section>
 
         <section class="section">
-          <h2 class="section__title">Storyline + Canva Design System</h2>
+          <h2 class="section__title">Storyline Learning System</h2>
           <div class="section__divider"></div>
 
-          <div
-            class="tool-tabs"
-            role="tablist"
-            aria-label="Design toolkit view"
-          >
-            <button
-              class="tool-tab active"
-              role="tab"
-              aria-selected="true"
-              data-tab="storyline-panel"
-            >
-              Storyline Interaction Layer
-            </button>
-            <button
-              class="tool-tab"
-              role="tab"
-              aria-selected="false"
-              data-tab="canva-panel"
-            >
-              Canva Visual Layer
-            </button>
-          </div>
+          <p class="integrated-intro">
+            This project now focuses on Storyline as the primary delivery mode:
+            branching logic, variable-driven feedback, checkpoint progression,
+            and learner coaching in a single interactive flow.
+          </p>
 
-          <div class="tool-panel active" id="storyline-panel" role="tabpanel">
-            <h3>Storyline-inspired behavior</h3>
+          <div class="integrated-system storyline-only">
+            <div class="integrated-panel">
+              <h3>Interaction Engine (Storyline)</h3>
             <ul>
               <li>
                 Branching path decisions that mirror day-one workplace choices
@@ -139,10 +137,49 @@
                     response.
                   </p>
                   <div class="storyline-mock__choices">
-                    <button type="button">Escalate to supervisor</button>
-                    <button type="button">Approve quickly</button>
+                    <button type="button" data-storyline-choice="safe">
+                      Escalate to supervisor
+                    </button>
+                    <button type="button" data-storyline-choice="risk">
+                      Approve quickly
+                    </button>
                   </div>
+                  <p class="storyline-mock__feedback" id="storyline-mock-feedback" aria-live="polite">
+                    Select an option to preview Storyline-style coaching feedback.
+                  </p>
                 </div>
+              </div>
+            </div>
+
+            <div class="storyline-complete">
+              <h4>Storyline Build Breakdown</h4>
+              <div class="storyline-grid">
+                <article class="storyline-chip">
+                  <h5>Workflow</h5>
+                  <ol>
+                    <li>SME interview and scenario mapping</li>
+                    <li>Storyboard drafting with feedback loops</li>
+                    <li>Branch logic + variable implementation</li>
+                    <li>QA pass, accessibility check, and publish</li>
+                  </ol>
+                </article>
+                <article class="storyline-chip">
+                  <h5>Interaction Components</h5>
+                  <ul>
+                    <li>Scene-based decisions with consequence text</li>
+                    <li>Immediate corrective coaching after risky actions</li>
+                    <li>Progress checkpoints before final outcome</li>
+                    <li>Replay option for mastery reinforcement</li>
+                  </ul>
+                </article>
+                <article class="storyline-chip">
+                  <h5>Outcome Targets</h5>
+                  <ul>
+                    <li>Reduce onboarding confusion in first week</li>
+                    <li>Increase policy-compliant decision confidence</li>
+                    <li>Shorten time-to-productivity for new hires</li>
+                  </ul>
+                </article>
               </div>
             </div>
 
@@ -150,25 +187,9 @@
               Benefit: Learners do not just read policy, they practice decisions
               before they face them in the real environment.
             </p>
+            </div>
           </div>
 
-          <div class="tool-panel" id="canva-panel" role="tabpanel">
-            <h3>Canva-inspired visual language</h3>
-            <ul>
-              <li>
-                Clean card layouts with strong hierarchy and icon-driven
-                scanning
-              </li>
-              <li>
-                Consistent color blocks that organize content by task type
-              </li>
-              <li>Presentation-ready templates for quick course iteration</li>
-            </ul>
-            <p class="panel-benefit">
-              Benefit: Visual consistency lowers cognitive friction and helps
-              new hires locate key information faster.
-            </p>
-          </div>
         </section>
 
         <section class="section">
