@@ -251,6 +251,63 @@ main {
   color: var(--color-primary-dark);
 }
 
+.section-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.section-help {
+  position: relative;
+  margin-top: -0.15rem;
+}
+
+.section-help__trigger {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #b8cfe3;
+  background: #ffffff;
+  color: #1f4769;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.section-help__trigger:hover {
+  background: #eaf5ff;
+}
+
+.section-help__tooltip {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: -4px;
+  width: min(360px, 82vw);
+  border: 1px solid #cddcee;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #365774;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  box-shadow: 0 10px 26px rgba(12, 28, 46, 0.18);
+  padding: 0.55rem 0.65rem;
+  z-index: 25;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
+}
+
+.section-help:hover .section-help__tooltip,
+.section-help:focus-within .section-help__tooltip {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 .section__divider {
   width: 48px;
   height: 3px;
@@ -1234,6 +1291,10 @@ footer a {
     padding: 1.3rem;
     padding-right: 1.3rem;
     min-height: 0;
+  }
+
+  .section-help__tooltip {
+    width: min(300px, 84vw);
   }
 
   .project-hero__card {
