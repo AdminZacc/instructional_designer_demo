@@ -639,7 +639,7 @@ footer a {
   margin-top: 1rem;
   border: 1px solid #cddcee;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
   background: #f6fbff;
 }
 
@@ -690,7 +690,7 @@ footer a {
 .storyline-help__tooltip {
   position: absolute;
   top: calc(100% + 6px);
-  right: 0;
+  right: -6px;
   width: min(520px, 88vw);
   border: 1px solid #cddcee;
   border-radius: 12px;
