@@ -162,33 +162,209 @@ if (
   setStorylineStage("1");
 }
 
-const scenarioButtons = document.querySelectorAll(".scenario-btn");
+const scenarioButtons = [
+  document.getElementById("scenario-choice-1"),
+  document.getElementById("scenario-choice-2"),
+  document.getElementById("scenario-choice-3"),
+].filter(Boolean);
 const scenarioFeedback = document.getElementById("scenario-feedback");
+const scenarioPrompt = document.getElementById("scenario-prompt");
+const scenarioStep = document.getElementById("scenario-step");
+const scenarioScore = document.getElementById("scenario-score");
+const scenarioNext = document.getElementById("scenario-next");
+const scenarioRestart = document.getElementById("scenario-restart");
 
-if (scenarioButtons.length && scenarioFeedback) {
-  const feedbackMap = {
-    escalate:
-      "Strong choice. Escalating early protects compliance and builds confidence through coaching.",
-    policy:
-      "Solid choice. Checking policy first promotes consistency and helps avoid preventable errors.",
-    guess:
-      "Risky path. Guessing can create rework and compliance issues. Try policy review or escalation first.",
+if (
+  scenarioButtons.length === 3 &&
+  scenarioFeedback &&
+  scenarioPrompt &&
+  scenarioStep &&
+  scenarioScore &&
+  scenarioNext &&
+  scenarioRestart
+) {
+  const miniScenarioQuestions = [
+    {
+      prompt:
+        "A new employee receives a customer request that appears outside policy. What should they do first?",
+      answers: [
+        {
+          label: "Escalate to supervisor",
+          points: 2,
+          tone: "good",
+          feedback:
+            "Excellent first move. Escalating quickly protects compliance and gets timely coaching.",
+        },
+        {
+          label: "Make best guess and proceed",
+          points: 0,
+          tone: "risk",
+          feedback:
+            "Risky choice. Guessing can create rework and policy violations.",
+        },
+        {
+          label: "Check policy guide first",
+          points: 1,
+          tone: "warn",
+          feedback:
+            "Good instinct. Policy review helps, but escalation is stronger in uncertain edge cases.",
+        },
+      ],
+    },
+    {
+      prompt:
+        "The learner is overwhelmed by multiple procedures. Which strategy should they use next?",
+      answers: [
+        {
+          label: "Chunk tasks into short checkpoints",
+          points: 2,
+          tone: "good",
+          feedback:
+            "Great strategy. Chunking reduces cognitive load and improves retention.",
+        },
+        {
+          label: "Memorize all steps at once",
+          points: 0,
+          tone: "risk",
+          feedback:
+            "Not ideal. Information overload reduces recall and increases errors.",
+        },
+        {
+          label: "Skim and hope to remember later",
+          points: 0,
+          tone: "risk",
+          feedback:
+            "Weak strategy. Passive review rarely supports strong transfer to the job.",
+        },
+      ],
+    },
+    {
+      prompt:
+        "After a risky decision, what feedback approach best supports learning transfer?",
+      answers: [
+        {
+          label: "Give immediate, specific coaching",
+          points: 2,
+          tone: "good",
+          feedback:
+            "Correct. Immediate and specific coaching drives behavior change.",
+        },
+        {
+          label: "Wait until end of the week",
+          points: 0,
+          tone: "risk",
+          feedback:
+            "Too late. Delayed feedback weakens cause-and-effect learning.",
+        },
+        {
+          label: "Only state the final score",
+          points: 0,
+          tone: "risk",
+          feedback:
+            "Insufficient. Scores without guidance do not clarify what to improve.",
+        },
+      ],
+    },
+  ];
+
+  const scenarioState = {
+    index: 0,
+    score: 0,
+    answered: false,
   };
 
-  const toneMap = {
-    escalate: "good",
-    policy: "warn",
-    guess: "risk",
+  const renderScenarioQuestion = () => {
+    const current = miniScenarioQuestions[scenarioState.index];
+    scenarioPrompt.textContent = current.prompt;
+    scenarioStep.textContent = `Question ${scenarioState.index + 1} of ${miniScenarioQuestions.length}`;
+    scenarioScore.textContent = `Score: ${scenarioState.score}`;
+    scenarioFeedback.className = "scenario-feedback";
+    scenarioFeedback.textContent = "Choose an option to see coaching feedback, then continue.";
+    scenarioNext.disabled = true;
+    scenarioNext.textContent =
+      scenarioState.index === miniScenarioQuestions.length - 1 ? "See Results" : "Next Question";
+
+    scenarioButtons.forEach((button, idx) => {
+      button.disabled = false;
+      button.classList.remove("is-selected");
+      button.textContent = current.answers[idx].label;
+    });
+
+    scenarioRestart.hidden = true;
+    scenarioState.answered = false;
   };
 
-  scenarioButtons.forEach((button) => {
+  const renderScenarioResult = () => {
+    scenarioStep.textContent = "Complete";
+    scenarioPrompt.textContent = "Mini Scenario Results";
+    scenarioButtons.forEach((button) => {
+      button.disabled = true;
+      button.classList.remove("is-selected");
+    });
+    scenarioNext.disabled = true;
+    scenarioRestart.hidden = false;
+
+    const maxScore = miniScenarioQuestions.length * 2;
+    const pct = Math.round((scenarioState.score / maxScore) * 100);
+
+    if (pct >= 84) {
+      scenarioFeedback.className = "scenario-feedback good";
+      scenarioFeedback.textContent = `Strong performance (${scenarioState.score}/${maxScore}). You consistently used high-impact instructional decisions.`;
+      return;
+    }
+
+    if (pct >= 50) {
+      scenarioFeedback.className = "scenario-feedback warn";
+      scenarioFeedback.textContent = `Solid start (${scenarioState.score}/${maxScore}). You showed good instincts with room to tighten decision consistency.`;
+      return;
+    }
+
+    scenarioFeedback.className = "scenario-feedback risk";
+    scenarioFeedback.textContent = `Needs reinforcement (${scenarioState.score}/${maxScore}). Retry and prioritize escalation, chunking, and immediate feedback.`;
+  };
+
+  scenarioButtons.forEach((button, idx) => {
     button.addEventListener("click", () => {
-      const outcome = button.getAttribute("data-outcome");
-      scenarioFeedback.textContent =
-        feedbackMap[outcome] || "Select an option.";
-      scenarioFeedback.className = `scenario-feedback ${toneMap[outcome] || ""}`;
+      if (scenarioState.answered) {
+        return;
+      }
+
+      const current = miniScenarioQuestions[scenarioState.index];
+      const selected = current.answers[idx];
+      scenarioState.score += selected.points;
+      scenarioState.answered = true;
+
+      scenarioButtons.forEach((item) => {
+        item.disabled = true;
+        item.classList.remove("is-selected");
+      });
+      button.classList.add("is-selected");
+
+      scenarioFeedback.className = `scenario-feedback ${selected.tone}`;
+      scenarioFeedback.textContent = selected.feedback;
+      scenarioScore.textContent = `Score: ${scenarioState.score}`;
+      scenarioNext.disabled = false;
     });
   });
+
+  scenarioNext.addEventListener("click", () => {
+    if (scenarioState.index < miniScenarioQuestions.length - 1) {
+      scenarioState.index += 1;
+      renderScenarioQuestion();
+      return;
+    }
+
+    renderScenarioResult();
+  });
+
+  scenarioRestart.addEventListener("click", () => {
+    scenarioState.index = 0;
+    scenarioState.score = 0;
+    scenarioState.answered = false;
+    renderScenarioQuestion();
+  });
+
+  renderScenarioQuestion();
 }
 
 // ── Branching scene simulator ─────────────────

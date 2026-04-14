@@ -368,18 +368,22 @@
           <div class="section__divider"></div>
 
           <div class="scenario-box">
-            <p class="scenario-prompt">
+            <div class="scenario-head">
+              <p class="scenario-step" id="scenario-step">Question 1 of 3</p>
+              <p class="scenario-score" id="scenario-score">Score: 0</p>
+            </div>
+            <p class="scenario-prompt" id="scenario-prompt">
               A new employee receives a customer request that appears outside
               policy. What should they do first?
             </p>
             <div class="scenario-actions">
-              <button class="scenario-btn" data-outcome="escalate">
+              <button class="scenario-btn" id="scenario-choice-1" type="button">
                 Escalate to supervisor
               </button>
-              <button class="scenario-btn" data-outcome="guess">
+              <button class="scenario-btn" id="scenario-choice-2" type="button">
                 Make best guess and proceed
               </button>
-              <button class="scenario-btn" data-outcome="policy">
+              <button class="scenario-btn" id="scenario-choice-3" type="button">
                 Check policy guide first
               </button>
             </div>
@@ -388,8 +392,16 @@
               id="scenario-feedback"
               aria-live="polite"
             >
-              Choose an option to see coaching feedback.
+              Choose an option to see coaching feedback, then continue.
             </p>
+            <div class="scenario-controls">
+              <button class="btn btn--outline" id="scenario-next" type="button" disabled>
+                Next Question
+              </button>
+              <button class="btn btn--primary scenario-restart" id="scenario-restart" type="button" hidden>
+                Restart Mini Demo
+              </button>
+            </div>
           </div>
         </section>
 

@@ -832,6 +832,24 @@ footer a {
   margin-bottom: 0.8rem;
 }
 
+.scenario-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.82rem;
+}
+
+.scenario-step {
+  color: #335170;
+  font-weight: 700;
+}
+
+.scenario-score {
+  color: #0e7490;
+  font-weight: 700;
+}
+
 .scenario-actions {
   display: flex;
   flex-wrap: wrap;
@@ -851,6 +869,22 @@ footer a {
 
 .scenario-btn:hover {
   background: #eaf5ff;
+}
+
+.scenario-btn.is-selected {
+  border-color: #0e7490;
+  background: #e8f6ff;
+}
+
+.scenario-controls {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.scenario-restart[hidden] {
+  display: none;
 }
 
 .scenario-feedback {
