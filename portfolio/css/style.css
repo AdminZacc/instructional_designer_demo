@@ -702,6 +702,21 @@ footer a {
   margin-bottom: 0.65rem;
 }
 
+.branch-map__hint {
+  font-size: 0.82rem;
+  color: #45637f;
+  margin-bottom: 0.65rem;
+}
+
+.branch-map__hint kbd {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  border: 1px solid #bdd4e8;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 0.05rem 0.35rem;
+}
+
 .branch-map__lane {
   display: flex;
   align-items: center;

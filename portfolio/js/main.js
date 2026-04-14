@@ -170,7 +170,7 @@ if (branchingModule) {
     const allSafe = state.track.every((choice) => choice === "safe");
     const mostlySafe = state.score >= 4;
 
-    resultBox.classList.remove("success", "partial", "retry");
+    resultBox.classList.remove("success", "partial", "retry", "demo");
 
     if (allSafe) {
       resultBox.classList.add("success");
@@ -217,30 +217,66 @@ if (branchingModule) {
       state.track = [];
       updateProgress();
       showScene(1);
-      resultBox.classList.remove("success", "partial", "retry");
+      resultBox.classList.remove("success", "partial", "retry", "demo");
       resultBox.textContent = "Reviewing your path...";
     });
   }
+
+  const jumpToScene = (jumpTarget) => {
+    state.step = jumpTarget === "result" ? "result" : Number(jumpTarget);
+
+    if (state.step === "result") {
+      resultBox.classList.remove("success", "partial", "retry");
+      resultBox.classList.add("demo");
+      resultBox.textContent =
+        "Demo mode: this is the outcome screen preview. Complete the scenario choices to generate a scored coaching result.";
+    } else {
+      resultBox.classList.remove("success", "partial", "retry", "demo");
+      resultBox.textContent = "Reviewing your path...";
+    }
+
+    updateProgress();
+    showScene(state.step);
+  };
 
   if (mapNodes.length) {
     mapNodes.forEach((node) => {
       node.addEventListener("click", () => {
         const jumpTarget = node.getAttribute("data-jump-scene") || "1";
-        state.step = jumpTarget === "result" ? "result" : Number(jumpTarget);
-
-        if (state.step === "result") {
-          resultBox.classList.remove("success", "partial", "retry");
-          resultBox.classList.add("demo");
-          resultBox.textContent =
-            "Demo mode: this is the outcome screen preview. Complete the scenario choices to generate a scored coaching result.";
-        } else {
-          resultBox.classList.remove("success", "partial", "retry", "demo");
-          resultBox.textContent = "Reviewing your path...";
-        }
-
-        updateProgress();
-        showScene(state.step);
+        jumpToScene(jumpTarget);
       });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
+        return;
+      }
+
+      const target = event.target;
+      const isTypingContext =
+        target instanceof HTMLInputElement ||
+        target instanceof HTMLTextAreaElement ||
+        target instanceof HTMLSelectElement ||
+        (target instanceof HTMLElement && target.isContentEditable);
+
+      if (isTypingContext) {
+        return;
+      }
+
+      const keyToScene = {
+        1: "1",
+        2: "2",
+        3: "3",
+        0: "result",
+      };
+
+      const jumpTarget = keyToScene[event.key];
+      if (!jumpTarget) {
+        return;
+      }
+
+      event.preventDefault();
+      jumpToScene(jumpTarget);
     });
   }
 
