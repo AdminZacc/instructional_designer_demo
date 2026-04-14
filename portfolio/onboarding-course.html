@@ -33,8 +33,9 @@
           <p class="project-hero__eyebrow">Flagship eLearning Case Study</p>
           <h1>Onboarding Course - New Employee Orientation</h1>
           <p class="project-hero__summary">
-            A 25-minute module designed to reduce time-to-productivity for new hires
-            through branching scenarios, immediate feedback, and visual microlearning.
+            A 25-minute module designed to reduce time-to-productivity for new
+            hires through branching scenarios, immediate feedback, and visual
+            microlearning.
           </p>
           <div class="project-meta">
             <span>Tools: Articulate Storyline, Canva</span>
@@ -50,15 +51,15 @@
             <article class="story-card">
               <h3>Problem</h3>
               <p>
-                New hires needed faster role clarity and decision confidence in their
-                first week.
+                New hires needed faster role clarity and decision confidence in
+                their first week.
               </p>
             </article>
             <article class="story-card">
               <h3>Design Goal</h3>
               <p>
-                Build an experience that teaches policy through realistic choices and
-                short reflection loops.
+                Build an experience that teaches policy through realistic
+                choices and short reflection loops.
               </p>
             </article>
             <article class="story-card">
@@ -76,11 +77,25 @@
           <h2 class="section__title">Storyline + Canva Design System</h2>
           <div class="section__divider"></div>
 
-          <div class="tool-tabs" role="tablist" aria-label="Design toolkit view">
-            <button class="tool-tab active" role="tab" aria-selected="true" data-tab="storyline-panel">
+          <div
+            class="tool-tabs"
+            role="tablist"
+            aria-label="Design toolkit view"
+          >
+            <button
+              class="tool-tab active"
+              role="tab"
+              aria-selected="true"
+              data-tab="storyline-panel"
+            >
               Storyline Interaction Layer
             </button>
-            <button class="tool-tab" role="tab" aria-selected="false" data-tab="canva-panel">
+            <button
+              class="tool-tab"
+              role="tab"
+              aria-selected="false"
+              data-tab="canva-panel"
+            >
               Canva Visual Layer
             </button>
           </div>
@@ -88,27 +103,155 @@
           <div class="tool-panel active" id="storyline-panel" role="tabpanel">
             <h3>Storyline-inspired behavior</h3>
             <ul>
-              <li>Branching path decisions that mirror day-one workplace choices</li>
-              <li>Triggers and variables that adapt feedback by learner action</li>
-              <li>Checkpoint knowledge checks with short, corrective remediation</li>
+              <li>
+                Branching path decisions that mirror day-one workplace choices
+              </li>
+              <li>
+                Triggers and variables that adapt feedback by learner action
+              </li>
+              <li>
+                Checkpoint knowledge checks with short, corrective remediation
+              </li>
             </ul>
             <p class="panel-benefit">
-              Benefit: Learners do not just read policy, they practice decisions before
-              they face them in the real environment.
+              Benefit: Learners do not just read policy, they practice decisions
+              before they face them in the real environment.
             </p>
           </div>
 
           <div class="tool-panel" id="canva-panel" role="tabpanel">
             <h3>Canva-inspired visual language</h3>
             <ul>
-              <li>Clean card layouts with strong hierarchy and icon-driven scanning</li>
-              <li>Consistent color blocks that organize content by task type</li>
+              <li>
+                Clean card layouts with strong hierarchy and icon-driven
+                scanning
+              </li>
+              <li>
+                Consistent color blocks that organize content by task type
+              </li>
               <li>Presentation-ready templates for quick course iteration</li>
             </ul>
             <p class="panel-benefit">
-              Benefit: Visual consistency lowers cognitive friction and helps new hires
-              locate key information faster.
+              Benefit: Visual consistency lowers cognitive friction and helps
+              new hires locate key information faster.
             </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section__title">Branching Scene Simulator</h2>
+          <div class="section__divider"></div>
+
+          <div class="branching-module" id="branching-module">
+            <div class="branching-head">
+              <p class="branching-label">Scenario Progress</p>
+              <div class="branching-steps" aria-hidden="true">
+                <span class="branching-step active" data-step-indicator="1"
+                  >1</span
+                >
+                <span class="branching-step" data-step-indicator="2">2</span>
+                <span class="branching-step" data-step-indicator="3">3</span>
+              </div>
+              <div class="branching-progress">
+                <div
+                  class="branching-progress__bar"
+                  id="branching-progress-bar"
+                ></div>
+              </div>
+            </div>
+
+            <article class="branch-scene active" data-scene="1">
+              <h3>Scene 1: First Customer Interaction</h3>
+              <p>
+                A new hire is asked to make an exception to a standard
+                onboarding policy because a customer is in a hurry.
+              </p>
+              <div class="branch-options">
+                <button
+                  class="branch-choice"
+                  data-track="safe"
+                  data-points="2"
+                  data-next="2"
+                >
+                  Confirm policy and escalate to supervisor
+                </button>
+                <button
+                  class="branch-choice"
+                  data-track="risky"
+                  data-points="0"
+                  data-next="2"
+                >
+                  Approve the exception immediately to be helpful
+                </button>
+              </div>
+            </article>
+
+            <article class="branch-scene" data-scene="2">
+              <h3>Scene 2: Information Overload Moment</h3>
+              <p>
+                The learner now has four procedures to memorize before the next
+                shift. Which learning move supports retention best?
+              </p>
+              <div class="branch-options">
+                <button
+                  class="branch-choice"
+                  data-track="safe"
+                  data-points="2"
+                  data-next="3"
+                >
+                  Chunk tasks into short checkpoints with quick self-checks
+                </button>
+                <button
+                  class="branch-choice"
+                  data-track="risky"
+                  data-points="0"
+                  data-next="3"
+                >
+                  Read all procedures once and rely on memory
+                </button>
+              </div>
+            </article>
+
+            <article class="branch-scene" data-scene="3">
+              <h3>Scene 3: Coaching Feedback</h3>
+              <p>
+                The supervisor asks the learner to explain their decision
+                process. Choose the strongest response.
+              </p>
+              <div class="branch-options">
+                <button
+                  class="branch-choice"
+                  data-track="safe"
+                  data-points="2"
+                  data-next="result"
+                >
+                  Explain policy alignment, risk prevention, and customer
+                  communication
+                </button>
+                <button
+                  class="branch-choice"
+                  data-track="risky"
+                  data-points="0"
+                  data-next="result"
+                >
+                  Say you followed intuition and moved quickly
+                </button>
+              </div>
+            </article>
+
+            <article class="branch-scene" data-scene="result">
+              <h3>Simulation Outcome</h3>
+              <p class="branch-result" id="branch-result">
+                Reviewing your path...
+              </p>
+              <button
+                class="btn btn--primary"
+                id="branch-restart"
+                type="button"
+              >
+                Restart Scenario
+              </button>
+            </article>
           </div>
         </section>
 
@@ -118,22 +261,34 @@
 
           <div class="scenario-box">
             <p class="scenario-prompt">
-              A new employee receives a customer request that appears outside policy.
-              What should they do first?
+              A new employee receives a customer request that appears outside
+              policy. What should they do first?
             </p>
             <div class="scenario-actions">
-              <button class="scenario-btn" data-outcome="escalate">Escalate to supervisor</button>
-              <button class="scenario-btn" data-outcome="guess">Make best guess and proceed</button>
-              <button class="scenario-btn" data-outcome="policy">Check policy guide first</button>
+              <button class="scenario-btn" data-outcome="escalate">
+                Escalate to supervisor
+              </button>
+              <button class="scenario-btn" data-outcome="guess">
+                Make best guess and proceed
+              </button>
+              <button class="scenario-btn" data-outcome="policy">
+                Check policy guide first
+              </button>
             </div>
-            <p class="scenario-feedback" id="scenario-feedback" aria-live="polite">
+            <p
+              class="scenario-feedback"
+              id="scenario-feedback"
+              aria-live="polite"
+            >
               Choose an option to see coaching feedback.
             </p>
           </div>
         </section>
 
-        <section class="section" style="padding-top: 0.5rem">
-          <a class="btn btn--outline" href="portfolio.html">Back to Portfolio</a>
+        <section class="section project-backlink-section">
+          <a class="btn btn--outline" href="portfolio.html"
+            >Back to Portfolio</a
+          >
         </section>
       </div>
     </main>
