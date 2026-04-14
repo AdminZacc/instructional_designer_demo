@@ -617,6 +617,95 @@ footer a {
   color: var(--color-muted);
 }
 
+.storyline-mock {
+  margin-top: 1rem;
+  border: 1px solid #cddcee;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f6fbff;
+}
+
+.storyline-mock__topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-bottom: 1px solid #d7e5f4;
+  background: #ecf4fb;
+  padding: 0.45rem 0.65rem;
+}
+
+.storyline-mock__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8fb4d8;
+}
+
+.storyline-mock__topbar p {
+  margin-left: 0.35rem;
+  font-size: 0.78rem;
+  color: #365774;
+}
+
+.storyline-mock__body {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  min-height: 170px;
+}
+
+.storyline-mock__sidebar {
+  background: #e7f0f8;
+  border-right: 1px solid #d3e1ef;
+  padding: 0.7rem 0.6rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.storyline-mock__sidebar span {
+  font-size: 0.76rem;
+  color: #4d647b;
+}
+
+.storyline-mock__sidebar span.active {
+  color: #0f3555;
+  font-weight: 700;
+}
+
+.storyline-mock__content {
+  padding: 0.8rem;
+}
+
+.storyline-mock__content h4 {
+  margin-bottom: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.storyline-mock__content p {
+  font-size: 0.85rem;
+  color: #4b6177;
+  margin-bottom: 0.55rem;
+}
+
+.storyline-mock__choices {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.storyline-mock__choices button {
+  text-align: left;
+  border: 1px solid #b9d1e8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #123b5d;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.5rem;
+}
+
+.storyline-mock__choices button:hover {
+  background: #eaf5ff;
+}
+
 .panel-benefit {
   margin-top: 0.9rem;
   font-size: 0.92rem;
@@ -956,6 +1045,17 @@ footer a {
 
   .project-hero {
     padding: 1.3rem;
+  }
+
+  .storyline-mock__body {
+    grid-template-columns: 1fr;
+  }
+
+  .storyline-mock__sidebar {
+    border-right: 0;
+    border-bottom: 1px solid #d3e1ef;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.35rem;
   }
 
   .branching-module {
