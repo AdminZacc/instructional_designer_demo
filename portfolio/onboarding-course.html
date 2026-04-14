@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onboarding Course | Your Name</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">Your Name</a>
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <section class="project-hero">
+          <p class="project-hero__eyebrow">Flagship eLearning Case Study</p>
+          <h1>Onboarding Course - New Employee Orientation</h1>
+          <p class="project-hero__summary">
+            A 25-minute module designed to reduce time-to-productivity for new hires
+            through branching scenarios, immediate feedback, and visual microlearning.
+          </p>
+          <div class="project-meta">
+            <span>Tools: Articulate Storyline, Canva</span>
+            <span>Audience: New employees</span>
+            <span>Format: Self-paced</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section__title">Project Snapshot</h2>
+          <div class="section__divider"></div>
+          <div class="story-cards">
+            <article class="story-card">
+              <h3>Problem</h3>
+              <p>
+                New hires needed faster role clarity and decision confidence in their
+                first week.
+              </p>
+            </article>
+            <article class="story-card">
+              <h3>Design Goal</h3>
+              <p>
+                Build an experience that teaches policy through realistic choices and
+                short reflection loops.
+              </p>
+            </article>
+            <article class="story-card">
+              <h3>Learning Benefits</h3>
+              <ul>
+                <li>Faster onboarding consistency</li>
+                <li>Higher confidence in key tasks</li>
+                <li>Better knowledge retention</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section__title">Storyline + Canva Design System</h2>
+          <div class="section__divider"></div>
+
+          <div class="tool-tabs" role="tablist" aria-label="Design toolkit view">
+            <button class="tool-tab active" role="tab" aria-selected="true" data-tab="storyline-panel">
+              Storyline Interaction Layer
+            </button>
+            <button class="tool-tab" role="tab" aria-selected="false" data-tab="canva-panel">
+              Canva Visual Layer
+            </button>
+          </div>
+
+          <div class="tool-panel active" id="storyline-panel" role="tabpanel">
+            <h3>Storyline-inspired behavior</h3>
+            <ul>
+              <li>Branching path decisions that mirror day-one workplace choices</li>
+              <li>Triggers and variables that adapt feedback by learner action</li>
+              <li>Checkpoint knowledge checks with short, corrective remediation</li>
+            </ul>
+            <p class="panel-benefit">
+              Benefit: Learners do not just read policy, they practice decisions before
+              they face them in the real environment.
+            </p>
+          </div>
+
+          <div class="tool-panel" id="canva-panel" role="tabpanel">
+            <h3>Canva-inspired visual language</h3>
+            <ul>
+              <li>Clean card layouts with strong hierarchy and icon-driven scanning</li>
+              <li>Consistent color blocks that organize content by task type</li>
+              <li>Presentation-ready templates for quick course iteration</li>
+            </ul>
+            <p class="panel-benefit">
+              Benefit: Visual consistency lowers cognitive friction and helps new hires
+              locate key information faster.
+            </p>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section__title">Mini Scenario Demo (Vanilla JS)</h2>
+          <div class="section__divider"></div>
+
+          <div class="scenario-box">
+            <p class="scenario-prompt">
+              A new employee receives a customer request that appears outside policy.
+              What should they do first?
+            </p>
+            <div class="scenario-actions">
+              <button class="scenario-btn" data-outcome="escalate">Escalate to supervisor</button>
+              <button class="scenario-btn" data-outcome="guess">Make best guess and proceed</button>
+              <button class="scenario-btn" data-outcome="policy">Check policy guide first</button>
+            </div>
+            <p class="scenario-feedback" id="scenario-feedback" aria-live="polite">
+              Choose an option to see coaching feedback.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" style="padding-top: 0.5rem">
+          <a class="btn btn--outline" href="portfolio.html">Back to Portfolio</a>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
