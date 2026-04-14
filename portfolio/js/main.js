@@ -279,10 +279,13 @@ if (
     scenarioStep.textContent = `Question ${scenarioState.index + 1} of ${miniScenarioQuestions.length}`;
     scenarioScore.textContent = `Score: ${scenarioState.score}`;
     scenarioFeedback.className = "scenario-feedback";
-    scenarioFeedback.textContent = "Choose an option to see coaching feedback, then continue.";
+    scenarioFeedback.textContent =
+      "Choose an option to see coaching feedback, then continue.";
     scenarioNext.disabled = true;
     scenarioNext.textContent =
-      scenarioState.index === miniScenarioQuestions.length - 1 ? "See Results" : "Next Question";
+      scenarioState.index === miniScenarioQuestions.length - 1
+        ? "See Results"
+        : "Next Question";
 
     scenarioButtons.forEach((button, idx) => {
       button.disabled = false;
