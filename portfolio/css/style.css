@@ -661,8 +661,63 @@ footer a {
 
 .storyline-mock__topbar p {
   margin-left: 0.35rem;
+  margin-right: auto;
   font-size: 0.78rem;
   color: #365774;
+}
+
+.storyline-help {
+  position: relative;
+}
+
+.storyline-help__trigger {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #a6bfd7;
+  background: #ffffff;
+  color: #1f4769;
+  font-size: 0.76rem;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.storyline-help__trigger:hover {
+  background: #eaf5ff;
+}
+
+.storyline-help__tooltip {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: min(520px, 88vw);
+  border: 1px solid #cddcee;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(12, 28, 46, 0.2);
+  padding: 0.65rem;
+  z-index: 30;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease;
+}
+
+.storyline-help:hover .storyline-help__tooltip,
+.storyline-help:focus-within .storyline-help__tooltip {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.storyline-help__tooltip h4 {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #123b5d;
 }
 
 .storyline-mock__body {
@@ -768,17 +823,6 @@ footer a {
   color: #8a1f2d;
 }
 
-.storyline-complete {
-  margin-top: 1rem;
-}
-
-.storyline-complete h4 {
-  font-family: var(--font-sans);
-  font-size: 0.98rem;
-  margin-bottom: 0.55rem;
-  color: #123b5d;
-}
-
 .storyline-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -809,6 +853,10 @@ footer a {
   font-size: 0.8rem;
   color: #425f7a;
   margin-bottom: 0.2rem;
+}
+
+.storyline-help__tooltip .storyline-chip {
+  background: #f8fbff;
 }
 
 .panel-benefit {
