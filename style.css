@@ -534,6 +534,41 @@ main {
   display: block;
 }
 
+/* Formspree Ajax feedback */
+.form-success {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #15803d;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.form-error {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.form-field-error {
+  display: block;
+  color: #b91c1c;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #b91c1c;
+  outline-color: #b91c1c;
+}
+button[data-fs-submit-btn]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 /* =============================================
    Footer
    ============================================= */
