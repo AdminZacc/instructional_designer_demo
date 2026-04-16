@@ -1657,8 +1657,25 @@ footer a {
 }
 
 /* =============================================
-   Job Aid — Compliance Checklist
+   Job Aid — Compliance Checklist (Military)
    ============================================= */
+
+/* Military color palette (scoped to the shell) */
+:root {
+  --mil-bg: #1a1f18;
+  --mil-surface: #22271f;
+  --mil-border: #3a4035;
+  --mil-olive: #4a5240;
+  --mil-olive-light: #5c6650;
+  --mil-green: #6b7c55;
+  --mil-amber: #c8a040;
+  --mil-red: #a03030;
+  --mil-text: #d8dbd0;
+  --mil-muted: #8a9080;
+  --mil-done-bg: #1e2a1a;
+  --mil-font: "Courier New", "Courier", monospace;
+}
+
 .jaid-intro {
   font-size: 1rem;
   color: var(--color-muted);
@@ -1667,14 +1684,419 @@ footer a {
   line-height: 1.75;
 }
 
-/* Outer shell — mimics a printed card */
+/* Outer shell */
 .jaid-shell {
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
+  border: 2px solid var(--mil-border);
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
-  background: var(--color-surface);
+  box-shadow: 0 0 0 1px #0a0c09, 4px 4px 0 #0a0c09;
+  background: var(--mil-surface);
   margin-bottom: 1rem;
+  font-family: var(--mil-font);
+}
+
+/* Header bar */
+.jaid-header {
+  background: var(--mil-bg);
+  color: var(--mil-text);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px solid var(--mil-amber);
+}
+
+.jaid-header__label {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mil-amber);
+  margin-bottom: 0.3rem;
+  font-family: var(--mil-font);
+}
+
+.jaid-header__title {
+  font-size: 1.4rem;
+  font-family: var(--mil-font);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--mil-text);
+  margin-bottom: 0.2rem;
+}
+
+.jaid-header__sub {
+  font-size: 0.75rem;
+  color: var(--mil-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Progress ring */
+.jaid-header__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.jaid-progress-ring {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.jaid-ring-bg {
+  fill: none;
+  stroke: var(--mil-border);
+  stroke-width: 5;
+}
+
+.jaid-ring-fill {
+  fill: none;
+  stroke: var(--mil-amber);
+  stroke-width: 5;
+  stroke-linecap: butt;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 0.35s ease, stroke 0.35s ease;
+}
+
+.jaid-ring-pct {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--mil-font);
+  color: var(--mil-amber);
+}
+
+.jaid-progress-label {
+  font-size: 0.62rem;
+  color: var(--mil-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-family: var(--mil-font);
+}
+
+/* Body */
+.jaid-body {
+  padding: 0 2rem 1rem;
+  background: var(--mil-surface);
+}
+
+/* Section */
+.jaid-section {
+  border-bottom: 1px solid var(--mil-border);
+  padding: 1.5rem 0;
+}
+
+.jaid-section:last-of-type {
+  border-bottom: none;
+}
+
+.jaid-section__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.jaid-section__num {
+  width: 32px;
+  height: 32px;
+  border-radius: 0;
+  background: var(--mil-olive);
+  color: var(--mil-amber);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: var(--mil-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--mil-olive-light);
+  letter-spacing: 0.05em;
+}
+
+.jaid-section__title {
+  font-size: 0.85rem;
+  font-family: var(--mil-font);
+  font-weight: 700;
+  color: var(--mil-text);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+/* List */
+.jaid-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.jaid-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0;
+  border-left: 3px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.jaid-item:hover {
+  background: #2a3026;
+  border-left-color: var(--mil-olive-light);
+}
+
+.jaid-item--done {
+  background: var(--mil-done-bg);
+  border-left-color: var(--mil-green);
+}
+
+.jaid-item--done .jaid-item__label > span:last-child {
+  text-decoration: line-through;
+  color: var(--mil-muted);
+}
+
+.jaid-item__label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  cursor: pointer;
+  flex: 1;
+  font-size: 0.88rem;
+  font-family: var(--mil-font);
+  color: var(--mil-text);
+  line-height: 1.5;
+}
+
+/* Hide native checkbox, use custom box */
+.jaid-check {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.jaid-item__box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--mil-olive-light);
+  border-radius: 0;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: var(--mil-bg);
+  transition: background 0.15s, border-color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jaid-check:checked + .jaid-item__box {
+  background: var(--mil-green);
+  border-color: var(--mil-green);
+}
+
+.jaid-check:checked + .jaid-item__box::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.jaid-check:focus-visible + .jaid-item__box {
+  outline: 2px solid var(--mil-amber);
+  outline-offset: 2px;
+}
+
+.jaid-item__note {
+  font-size: 0.72rem;
+  font-family: var(--mil-font);
+  color: var(--mil-muted);
+  white-space: nowrap;
+  padding-top: 3px;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+
+/* Alert block */
+.jaid-alert {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: #1f1208;
+  border: 1px solid var(--mil-amber);
+  border-left: 4px solid var(--mil-red);
+  border-radius: 0;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.jaid-alert__icon {
+  font-size: 1rem;
+  font-family: var(--mil-font);
+  font-weight: 900;
+  color: var(--mil-red);
+  flex-shrink: 0;
+  line-height: 1.4;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--mil-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+}
+
+.jaid-alert__title {
+  font-weight: 700;
+  font-size: 0.82rem;
+  font-family: var(--mil-font);
+  color: var(--mil-amber);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.4rem;
+}
+
+.jaid-alert__body {
+  font-size: 0.82rem;
+  font-family: var(--mil-font);
+  color: #c0a870;
+  line-height: 1.65;
+}
+
+/* Footer bar */
+.jaid-footer {
+  background: var(--mil-bg);
+  border-top: 2px solid var(--mil-border);
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.72rem;
+  font-family: var(--mil-font);
+  color: var(--mil-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.jaid-reset {
+  font-size: 0.72rem;
+  font-family: var(--mil-font);
+  padding: 0.35rem 0.9rem;
+  background: transparent;
+  border: 1px solid var(--mil-olive-light);
+  border-radius: 0;
+  cursor: pointer;
+  color: var(--mil-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.jaid-reset:hover {
+  background: var(--mil-olive);
+  color: var(--mil-text);
+  border-color: var(--mil-olive-light);
+}
+
+/* Results row */
+.jaid-results {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.jaid-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.jaid-result__num {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.jaid-result__label {
+  font-size: 0.83rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+/* Decision icon — now numbered labels */
+.ldp-decision__icon {
+  font-size: 0.72rem;
+  font-family: var(--mil-font);
+  font-weight: 700;
+  width: 36px;
+  height: 36px;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  border-radius: 0;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .jaid-header {
+    padding: 1.25rem 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .jaid-body {
+    padding: 0 1.25rem 1rem;
+  }
+
+  .jaid-footer {
+    padding: 0.75rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .jaid-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .jaid-item__note {
+    white-space: normal;
+    padding-left: 1.5rem;
+  }
+
+  .jaid-results {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Header bar */
