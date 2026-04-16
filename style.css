@@ -2160,6 +2160,225 @@ footer a {
 }
 
 /* =============================================
+   Train-the-Trainer Workshop Page
+   ============================================= */
+
+/* ── Deliverables cards ─────────────────────── */
+.ttt-deliverables {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.ttt-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.2s;
+}
+
+.ttt-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+}
+
+.ttt-card__num {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  opacity: 0.25;
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 2.5rem;
+  padding-top: 0.15rem;
+}
+
+.ttt-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.ttt-card__desc {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: 0.85rem;
+}
+
+.ttt-card__specs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.75rem;
+}
+
+.ttt-card__specs li {
+  font-size: 0.8rem;
+  color: var(--color-text);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.45;
+}
+
+.ttt-card__specs li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-size: 0.72rem;
+}
+
+/* ── Agenda shell ───────────────────────────── */
+.agenda-shell {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-top: 1.5rem;
+}
+
+.agenda-legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.agenda-legend__item {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+}
+
+.agenda-legend__item--inst  { background: #dbeafe; color: #1e40af; }
+.agenda-legend__item--appl  { background: #dcfce7; color: #166534; }
+.agenda-legend__item--refl  { background: #fef3c7; color: #92400e; }
+.agenda-legend__item--break { background: var(--color-border); color: var(--color-muted); }
+
+/* Agenda track */
+.agenda-track {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual block button */
+.agenda-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.25rem;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background 0.15s;
+}
+
+.agenda-block:last-of-type {
+  border-bottom: none;
+}
+
+.agenda-block:hover,
+.agenda-block--open {
+  background: var(--color-bg);
+}
+
+/* Left accent strip by type */
+.agenda-block--inst  { border-left: 4px solid #3b82f6; }
+.agenda-block--appl  { border-left: 4px solid #22c55e; }
+.agenda-block--refl  { border-left: 4px solid var(--color-accent); }
+.agenda-block--break { border-left: 4px solid var(--color-border); }
+
+.agenda-block__time {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+  min-width: 110px;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.agenda-block__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  flex: 1;
+}
+
+.agenda-block__dur {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.agenda-block__chevron {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  line-height: 1;
+}
+
+.agenda-block--open .agenda-block__chevron {
+  transform: rotate(90deg);
+}
+
+/* Detail panel */
+.agenda-detail {
+  padding: 1rem 1.25rem 1rem 2.5rem;
+  background: #f8fafc;
+  border-bottom: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+}
+
+.agenda-detail p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.agenda-detail p:last-child {
+  margin-bottom: 0;
+}
+
+.agenda-detail__obj {
+  color: var(--color-primary-dark) !important;
+}
+
+/* TTT responsive */
+@media (max-width: 760px) {
+  .ttt-deliverables {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-block__time {
+    display: none;
+  }
+
+  .agenda-block__dur {
+    display: none;
+  }
+}
+
+/* =============================================
    Job Aid — Compliance Checklist (Military)
    ============================================= */
 
