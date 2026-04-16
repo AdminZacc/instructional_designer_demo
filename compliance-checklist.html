@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compliance Checklist | Zacc Elliott - Instructional Designer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ── Navigation ──────────────────────────── -->
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo"
+          >Zacc Elliott - Instructional Designer</a
+        >
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── Scroll progress ─────────────────────── -->
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar" id="scrollBar"></div>
+    </div>
+
+    <main>
+      <div class="container">
+        <!-- ── Project Hero ───────────────────── -->
+        <section class="project-hero">
+          <div class="project-hero__content">
+            <p class="project-hero__eyebrow">Job Aid · Visual Design</p>
+            <h1>Quick Reference — Compliance Checklist</h1>
+            <p class="project-hero__summary">
+              A one-page visual job aid designed to reduce compliance errors at
+              the point of performance. Deployed across three departments — 30%
+              fewer compliance incidents in the first quarter post-launch.
+            </p>
+            <div class="project-meta">
+              <span>Tools: Adobe InDesign, Canva</span>
+              <span>Format: Print + Digital PDF</span>
+              <span>Audience: Front-line staff</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Snapshot ───────────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Project Snapshot
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+
+          <div class="story-cards">
+            <article class="story-card reveal" data-reveal="fade-up">
+              <h3>Problem</h3>
+              <p>
+                Staff were missing required compliance steps not from lack of
+                training, but from lack of access to the right information at
+                the right moment. Training alone wasn't the answer.
+              </p>
+            </article>
+            <article class="story-card reveal" data-reveal="fade-up">
+              <h3>Design Goal</h3>
+              <p>
+                Build a zero-cognitive-load reference tool that surfaces
+                critical compliance steps in under 10 seconds — without
+                requiring staff to leave their workflow.
+              </p>
+            </article>
+            <article class="story-card reveal" data-reveal="fade-up">
+              <h3>Outcome</h3>
+              <ul>
+                <li>30% reduction in compliance errors (Q1 post-launch)</li>
+                <li>Adopted across 3 departments</li>
+                <li>Requested by staff as a laminated desk copy</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── Live Job Aid Demo ──────────────── -->
+        <section class="section" aria-label="Interactive job aid demo">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            The Job Aid — Interactive Demo
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+          <p class="jaid-intro reveal" data-reveal="fade-up">
+            This is a functional replica of the one-page reference tool. Check
+            off items as you go — the progress tracker updates in real time. On
+            the job, this was printed as a laminated desk card and distributed
+            as a digital PDF.
+          </p>
+
+          <div
+            class="jaid-shell reveal"
+            data-reveal="fade-up"
+            role="region"
+            aria-label="Compliance checklist"
+          >
+            <!-- Header bar -->
+            <div class="jaid-header">
+              <div class="jaid-header__left">
+                <p class="jaid-header__label">QUICK REFERENCE</p>
+                <h2 class="jaid-header__title">Compliance Checklist</h2>
+                <p class="jaid-header__sub">Front-Line Staff · Version 2.1</p>
+              </div>
+              <div class="jaid-header__right">
+                <div
+                  class="jaid-progress-ring"
+                  aria-live="polite"
+                  aria-label="Completion status"
+                >
+                  <svg
+                    viewBox="0 0 64 64"
+                    width="64"
+                    height="64"
+                    aria-hidden="true"
+                  >
+                    <circle class="jaid-ring-bg" cx="32" cy="32" r="27" />
+                    <circle
+                      class="jaid-ring-fill"
+                      id="ringFill"
+                      cx="32"
+                      cy="32"
+                      r="27"
+                    />
+                  </svg>
+                  <span class="jaid-ring-pct" id="ringPct">0%</span>
+                </div>
+                <p class="jaid-progress-label">Complete</p>
+              </div>
+            </div>
+
+            <!-- Checklist sections -->
+            <div class="jaid-body">
+              <!-- Section 1 -->
+              <div class="jaid-section">
+                <div class="jaid-section__header">
+                  <span class="jaid-section__num">01</span>
+                  <h3 class="jaid-section__title">Before You Begin</h3>
+                </div>
+                <ul class="jaid-list" role="list">
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span>Verify client ID matches system record</span>
+                    </label>
+                    <span class="jaid-item__note"
+                      >ID + one secondary identifier required</span
+                    >
+                  </li>
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span>Confirm consent form is signed and dated</span>
+                    </label>
+                    <span class="jaid-item__note"
+                      >Must be on file before service initiation</span
+                    >
+                  </li>
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span>Check for active flags or holds in system</span>
+                    </label>
+                    <span class="jaid-item__note"
+                      >Do not proceed if flag is unresolved</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Section 2 -->
+              <div class="jaid-section">
+                <div class="jaid-section__header">
+                  <span class="jaid-section__num">02</span>
+                  <h3 class="jaid-section__title">During the Interaction</h3>
+                </div>
+                <ul class="jaid-list" role="list">
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span>Document all service actions in real time</span>
+                    </label>
+                    <span class="jaid-item__note"
+                      >No retroactive entries permitted</span
+                    >
+                  </li>
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span
+                        >Apply correct service code for each action taken</span
+                      >
+                    </label>
+                    <span class="jaid-item__note"
+                      >See code reference on reverse side</span
+                    >
+                  </li>
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span
+                        >Escalate any policy exception to supervisor before
+                        proceeding</span
+                      >
+                    </label>
+                    <span class="jaid-item__note"
+                      >No exceptions approved at staff level</span
+                    >
+                  </li>
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span
+                        >Confirm client acknowledgment of rights and
+                        limits</span
+                      >
+                    </label>
+                    <span class="jaid-item__note"
+                      >Read from script if client requests</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Section 3 -->
+              <div class="jaid-section">
+                <div class="jaid-section__header">
+                  <span class="jaid-section__num">03</span>
+                  <h3 class="jaid-section__title">Before You Close</h3>
+                </div>
+                <ul class="jaid-list" role="list">
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span>Save and submit record before ending session</span>
+                    </label>
+                    <span class="jaid-item__note"
+                      >Unsaved records auto-delete after 30 min</span
+                    >
+                  </li>
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span
+                        >Attach any supporting documentation to case file</span
+                      >
+                    </label>
+                    <span class="jaid-item__note">Scanned copies accepted</span>
+                  </li>
+                  <li class="jaid-item">
+                    <label class="jaid-item__label">
+                      <input type="checkbox" class="jaid-check" />
+                      <span class="jaid-item__box" aria-hidden="true"></span>
+                      <span
+                        >Confirm next steps with client before departing</span
+                      >
+                    </label>
+                    <span class="jaid-item__note"
+                      >Follow-up window is 5 business days</span
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Section 4 — Alert box -->
+              <div class="jaid-alert">
+                <div class="jaid-alert__icon" aria-hidden="true">⚠️</div>
+                <div>
+                  <p class="jaid-alert__title">Critical Escalation Triggers</p>
+                  <p class="jaid-alert__body">
+                    If any of the following occur, stop the interaction and
+                    contact your supervisor immediately: client identity cannot
+                    be verified · consent is refused or withdrawn · system flags
+                    an active hold · client requests a policy exception.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- /.jaid-body -->
+
+            <!-- Footer bar -->
+            <div class="jaid-footer">
+              <p>
+                Approved by Compliance Office · Revised Q1 2025 · Questions?
+                Contact <strong>compliance@org.gov</strong>
+              </p>
+              <button
+                class="jaid-reset"
+                id="jaidReset"
+                type="button"
+                aria-label="Reset all checkboxes"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+          <!-- /.jaid-shell -->
+        </section>
+
+        <!-- ── Design Decisions ───────────────── -->
+        <section class="section" aria-label="Design decisions">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Design Decisions
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+
+          <div class="ldp-decisions">
+            <div class="ldp-decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon" aria-hidden="true">🧠</div>
+              <div>
+                <h3 class="ldp-decision__title">Cognitive Load First</h3>
+                <p class="ldp-decision__desc">
+                  I limited each section to a maximum of four items. Research on
+                  working memory (Miller's Law) informed grouping so staff could
+                  scan, act, and move on — not read a wall of text
+                  mid-interaction.
+                </p>
+              </div>
+            </div>
+
+            <div class="ldp-decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon" aria-hidden="true">🗂️</div>
+              <div>
+                <h3 class="ldp-decision__title">Sequential Not Categorical</h3>
+                <p class="ldp-decision__desc">
+                  Items are ordered by workflow sequence — Before, During, Close
+                  — matching the mental model staff already use. Categorical
+                  grouping (e.g., by policy type) was tested first and caused
+                  more errors, not fewer.
+                </p>
+              </div>
+            </div>
+
+            <div class="ldp-decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon" aria-hidden="true">⚠️</div>
+              <div>
+                <h3 class="ldp-decision__title">
+                  Escalation Triggers Separated
+                </h3>
+                <p class="ldp-decision__desc">
+                  Critical escalation conditions are visually isolated in an
+                  alert block rather than buried in the checklist. Staff need to
+                  recognize these instantly — contrast, color, and icon
+                  separation make them unmissable.
+                </p>
+              </div>
+            </div>
+
+            <div class="ldp-decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon" aria-hidden="true">📄</div>
+              <div>
+                <h3 class="ldp-decision__title">Print + Digital Parity</h3>
+                <p class="ldp-decision__desc">
+                  The original was designed in InDesign for print-first
+                  production, then exported as an accessible PDF. Layout
+                  decisions — column width, font size, spacing — were validated
+                  on both a laminated A4 card and a tablet screen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Results ────────────────────────── -->
+        <section class="section" aria-label="Results">
+          <h2 class="section__title reveal" data-reveal="fade-up">Results</h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+
+          <div class="jaid-results reveal" data-reveal="fade-up">
+            <div class="jaid-result">
+              <span class="jaid-result__num">30%</span>
+              <span class="jaid-result__label"
+                >Fewer compliance incidents<br />Q1 post-launch</span
+              >
+            </div>
+            <div class="jaid-result">
+              <span class="jaid-result__num">3</span>
+              <span class="jaid-result__label"
+                >Departments<br />adopted the tool</span
+              >
+            </div>
+            <div class="jaid-result">
+              <span class="jaid-result__num">1</span>
+              <span class="jaid-result__label"
+                >Page — zero<br />information bloat</span
+              >
+            </div>
+            <div class="jaid-result">
+              <span class="jaid-result__num">&lt;10s</span>
+              <span class="jaid-result__label"
+                >To locate any<br />step during task</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- ── CTA ───────────────────────────── -->
+        <section class="section home-cta-section reveal" data-reveal="fade-up">
+          <h2 class="home-cta-title">Need a job aid like this?</h2>
+          <p class="home-cta-text">
+            I design reference tools, facilitation guides, and performance
+            support materials that work at the point of need.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 1rem;
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a href="portfolio.html" class="btn btn--outline"
+              >Back to Portfolio</a
+            >
+            <a href="contact.html" class="btn btn--primary">Contact Me</a>
+          </div>
+        </section>
+      </div>
+      <!-- /.container -->
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Zacc Elliott. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+      // ── Checklist progress ring ────────────────
+      const checks = document.querySelectorAll(".jaid-check");
+      const ring = document.getElementById("ringFill");
+      const pct = document.getElementById("ringPct");
+      const resetBtn = document.getElementById("jaidReset");
+      const circumference = 2 * Math.PI * 27; // r=27
+
+      ring.style.strokeDasharray = circumference;
+      ring.style.strokeDashoffset = circumference;
+
+      function updateRing() {
+        const total = checks.length;
+        const checked = Array.from(checks).filter((c) => c.checked).length;
+        const progress = checked / total;
+        ring.style.strokeDashoffset = circumference * (1 - progress);
+        pct.textContent = Math.round(progress * 100) + "%";
+
+        // Colour the ring green when complete
+        ring.style.stroke = progress === 1 ? "#15803d" : "";
+
+        // Mark checked items visually
+        checks.forEach((c) => {
+          c.closest(".jaid-item").classList.toggle(
+            "jaid-item--done",
+            c.checked,
+          );
+        });
+      }
+
+      checks.forEach((c) => c.addEventListener("change", updateRing));
+
+      resetBtn.addEventListener("click", () => {
+        checks.forEach((c) => (c.checked = false));
+        updateRing();
+      });
+    </script>
+  </body>
+</html>
