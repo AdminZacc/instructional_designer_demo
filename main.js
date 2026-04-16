@@ -3,6 +3,37 @@ document.querySelectorAll("#year").forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
+// ── Scroll progress bar ───────────────────────
+const scrollBar = document.getElementById("scrollBar");
+if (scrollBar) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      scrollBar.style.width = total > 0 ? (scrolled / total) * 100 + "%" : "0%";
+    },
+    { passive: true },
+  );
+}
+
+// ── Scroll reveal (IntersectionObserver) ──────
+const revealEls = document.querySelectorAll("[data-reveal]");
+if (revealEls.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 },
+  );
+  revealEls.forEach((el) => observer.observe(el));
+}
+
 // ── Mobile nav toggle ─────────────────────────
 const toggle = document.querySelector(".nav__toggle");
 const navLinks = document.querySelector(".nav__links");
