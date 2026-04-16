@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills Gap Analysis | Zacc Elliott - Instructional Designer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ── Navigation ──────────────────────────── -->
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo"
+          >Zacc Elliott - Instructional Designer</a
+        >
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── Scroll progress ─────────────────────── -->
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar" id="scrollBar"></div>
+    </div>
+
+    <main>
+      <div class="container">
+        <!-- ── Project Hero ──────────────────────────────── -->
+        <section class="project-hero">
+          <div class="project-hero__content">
+            <p class="project-hero__eyebrow">Assessment · Evaluation Design</p>
+            <h1>Skills Gap Analysis — Sales Team</h1>
+            <p class="project-hero__summary">
+              A Kirkpatrick Level 2 &amp; 3 evaluation plan built to surface
+              real performance gaps — not just quiz scores. Paired with
+              scenario-based assessment items that mirror actual sales
+              conversations and tracked via Tableau dashboards.
+            </p>
+            <div class="project-meta">
+              <span>Tools: Excel, SurveyMonkey, Tableau</span>
+              <span>Format: Mixed-method evaluation</span>
+              <span>Audience: 47-person sales org</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Snapshot ─────────────────────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Project Snapshot
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+
+          <div class="story-cards">
+            <article class="story-card reveal" data-reveal="fade-up">
+              <h3>Problem</h3>
+              <p>
+                Sales training was measured almost exclusively by completion
+                rates and post-quiz scores. Leadership had no visibility into
+                whether reps could actually apply new skills in live deals — and
+                conversion rates reflected it.
+              </p>
+            </article>
+            <article class="story-card reveal" data-reveal="fade-up">
+              <h3>Design Goal</h3>
+              <p>
+                Build an evaluation architecture that distinguishes
+                <em>learning</em> (L2) from <em>behavior change</em> (L3), using
+                scenario-based items that require application — not recognition
+                — and connect training outputs to business data.
+              </p>
+            </article>
+            <article class="story-card reveal" data-reveal="fade-up">
+              <h3>Outcome</h3>
+              <p>
+                22-point increase in scenario assessment scores post-training.
+                Manager observation data confirmed 78% of reps applied target
+                behaviors on the floor within 45 days. Tableau dashboard now
+                part of the quarterly L&amp;D review.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── Kirkpatrick Framework ─────────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Evaluation Framework
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+          <p class="section__lead reveal" data-reveal="fade-up">
+            The plan targets two Kirkpatrick levels. Level 1 (satisfaction) was
+            already tracked — the gap was in knowing whether training actually
+            moved the needle.
+          </p>
+
+          <div class="kp-grid reveal" data-reveal="fade-up">
+            <div class="kp-level kp-level--inactive">
+              <div class="kp-level__badge">L1</div>
+              <div class="kp-level__body">
+                <p class="kp-level__name">Reaction</p>
+                <p class="kp-level__desc">
+                  Already tracked via end-of-course satisfaction surveys. Not in
+                  scope for this project.
+                </p>
+              </div>
+            </div>
+
+            <div class="kp-level kp-level--active">
+              <div class="kp-level__badge kp-level__badge--active">L2</div>
+              <div class="kp-level__body">
+                <p class="kp-level__name">Learning</p>
+                <p class="kp-level__desc">
+                  Did reps acquire the target knowledge and skills? Measured via
+                  scenario-based pre/post assessment items scored against a
+                  rubric.
+                </p>
+                <ul class="kp-level__methods">
+                  <li>SurveyMonkey scenario assessments (pre &amp; post)</li>
+                  <li>Excel scoring rubric with weighted criteria</li>
+                  <li>Cohort-level gain score analysis</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="kp-level kp-level--active">
+              <div class="kp-level__badge kp-level__badge--active">L3</div>
+              <div class="kp-level__body">
+                <p class="kp-level__name">Behavior</p>
+                <p class="kp-level__desc">
+                  Are reps applying new skills on the floor 30–60 days
+                  post-training? Measured via structured manager observation and
+                  CRM data pulls.
+                </p>
+                <ul class="kp-level__methods">
+                  <li>Manager observation checklist (standardized)</li>
+                  <li>CRM activity data (30 / 45 / 60-day checkpoints)</li>
+                  <li>Tableau dashboard for ongoing monitoring</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="kp-level kp-level--inactive">
+              <div class="kp-level__badge">L4</div>
+              <div class="kp-level__body">
+                <p class="kp-level__name">Results</p>
+                <p class="kp-level__desc">
+                  Business impact (quota attainment, win rate). Planned for
+                  Phase 2 once L3 baselines are established.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Scenario Demo ────────────────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Scenario-Based Assessment — Sample Item
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+          <p class="section__lead reveal" data-reveal="fade-up">
+            These items move beyond recall. Each scenario presents a realistic
+            sales moment and requires the learner to choose the most effective
+            response — scored against a four-point rubric.
+          </p>
+
+          <div class="scenario-shell reveal" data-reveal="fade-up">
+            <!-- Header -->
+            <div class="scenario-header">
+              <div class="scenario-header__left">
+                <p class="scenario-header__label">
+                  Assessment Item — Level 2 · Scenario
+                </p>
+                <p class="scenario-header__title">
+                  Handling the "We Already Have a Vendor" Objection
+                </p>
+              </div>
+              <div
+                class="scenario-header__badge"
+                id="scenarioBadge"
+                aria-live="polite"
+              >
+                —
+              </div>
+            </div>
+
+            <!-- Stem -->
+            <div class="scenario-body">
+              <div class="scenario-stem">
+                <p class="scenario-stem__context">SITUATION</p>
+                <p class="scenario-stem__text">
+                  You're 12 minutes into a discovery call with a mid-market
+                  prospect. The conversation has been going well — they've
+                  confirmed budget authority and acknowledged a pain point. Then
+                  the contact says:
+                </p>
+                <blockquote class="scenario-stem__quote">
+                  "Look, we appreciate your time, but we've been with our
+                  current vendor for six years. Switching is a huge lift for our
+                  team and honestly not something we're looking at right now."
+                </blockquote>
+                <p class="scenario-stem__prompt">
+                  What is the <strong>most effective</strong> next move?
+                </p>
+              </div>
+
+              <!-- Options -->
+              <fieldset class="scenario-options" id="scenarioOptions">
+                <legend class="visually-hidden">Select one response</legend>
+
+                <label class="scenario-option" id="opt-a">
+                  <input
+                    type="radio"
+                    name="scenario1"
+                    value="a"
+                    class="scenario-radio"
+                  />
+                  <div class="scenario-option__inner">
+                    <span class="scenario-option__letter">A</span>
+                    <span class="scenario-option__text">
+                      Thank them for their honesty and offer to send a
+                      comparison one-pager they can review at their own pace —
+                      keeping the door open without pushing.
+                    </span>
+                    <span
+                      class="scenario-option__mark"
+                      aria-hidden="true"
+                    ></span>
+                  </div>
+                </label>
+
+                <label class="scenario-option" id="opt-b">
+                  <input
+                    type="radio"
+                    name="scenario1"
+                    value="b"
+                    class="scenario-radio"
+                  />
+                  <div class="scenario-option__inner">
+                    <span class="scenario-option__letter">B</span>
+                    <span class="scenario-option__text">
+                      Acknowledge the switching concern directly, then ask a
+                      focused question to understand what "not looking right
+                      now" is really about — is it timing, risk, or a genuine
+                      priority conflict?
+                    </span>
+                    <span
+                      class="scenario-option__mark"
+                      aria-hidden="true"
+                    ></span>
+                  </div>
+                </label>
+
+                <label class="scenario-option" id="opt-c">
+                  <input
+                    type="radio"
+                    name="scenario1"
+                    value="c"
+                    class="scenario-radio"
+                  />
+                  <div class="scenario-option__inner">
+                    <span class="scenario-option__letter">C</span>
+                    <span class="scenario-option__text">
+                      Pivot immediately to ROI data — explain that most
+                      customers recover switching costs within 90 days and share
+                      a case study from a similar company.
+                    </span>
+                    <span
+                      class="scenario-option__mark"
+                      aria-hidden="true"
+                    ></span>
+                  </div>
+                </label>
+
+                <label class="scenario-option" id="opt-d">
+                  <input
+                    type="radio"
+                    name="scenario1"
+                    value="d"
+                    class="scenario-radio"
+                  />
+                  <div class="scenario-option__inner">
+                    <span class="scenario-option__letter">D</span>
+                    <span class="scenario-option__text">
+                      Agree that switching is difficult and ask if there's a
+                      point-person on their team you should loop in for a more
+                      formal evaluation process.
+                    </span>
+                    <span
+                      class="scenario-option__mark"
+                      aria-hidden="true"
+                    ></span>
+                  </div>
+                </label>
+              </fieldset>
+
+              <!-- Feedback -->
+              <div class="scenario-feedback" id="scenarioFeedback" hidden>
+                <div class="scenario-feedback__header">
+                  <span
+                    class="scenario-feedback__score"
+                    id="feedbackScore"
+                  ></span>
+                  <span
+                    class="scenario-feedback__label"
+                    id="feedbackLabel"
+                  ></span>
+                </div>
+                <p
+                  class="scenario-feedback__rationale"
+                  id="feedbackRationale"
+                ></p>
+                <div class="scenario-rubric">
+                  <p class="scenario-rubric__title">Scoring Rubric</p>
+                  <div class="scenario-rubric__row">
+                    <span class="scenario-rubric__opt">A</span>
+                    <div class="scenario-rubric__bar-wrap">
+                      <div
+                        class="scenario-rubric__bar"
+                        style="width: 25%"
+                      ></div>
+                    </div>
+                    <span class="scenario-rubric__pts">1 / 4</span>
+                    <span class="scenario-rubric__tag"
+                      >Passive — misses diagnostic opportunity</span
+                    >
+                  </div>
+                  <div class="scenario-rubric__row">
+                    <span
+                      class="scenario-rubric__opt scenario-rubric__opt--best"
+                      >B</span
+                    >
+                    <div class="scenario-rubric__bar-wrap">
+                      <div
+                        class="scenario-rubric__bar scenario-rubric__bar--best"
+                        style="width: 100%"
+                      ></div>
+                    </div>
+                    <span class="scenario-rubric__pts">4 / 4</span>
+                    <span class="scenario-rubric__tag"
+                      >Best — surfaces real objection before countering</span
+                    >
+                  </div>
+                  <div class="scenario-rubric__row">
+                    <span class="scenario-rubric__opt">C</span>
+                    <div class="scenario-rubric__bar-wrap">
+                      <div
+                        class="scenario-rubric__bar"
+                        style="width: 50%"
+                      ></div>
+                    </div>
+                    <span class="scenario-rubric__pts">2 / 4</span>
+                    <span class="scenario-rubric__tag"
+                      >Partial — skips listening, leads with pitch</span
+                    >
+                  </div>
+                  <div class="scenario-rubric__row">
+                    <span class="scenario-rubric__opt">D</span>
+                    <div class="scenario-rubric__bar-wrap">
+                      <div
+                        class="scenario-rubric__bar"
+                        style="width: 25%"
+                      ></div>
+                    </div>
+                    <span class="scenario-rubric__pts">1 / 4</span>
+                    <span class="scenario-rubric__tag"
+                      >Premature — assumes readiness that was not
+                      confirmed</span
+                    >
+                  </div>
+                </div>
+                <button class="scenario-reset" id="scenarioReset">
+                  Try Again
+                </button>
+              </div>
+            </div>
+            <!-- /scenario-body -->
+          </div>
+          <!-- /scenario-shell -->
+        </section>
+
+        <!-- ── Design Decisions ─────────────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Design Decisions
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+
+          <div class="decisions-grid">
+            <div class="decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon">01</div>
+              <div>
+                <h3 class="decision__title">Scenario over recall</h3>
+                <p class="decision__body">
+                  Multiple-choice recall items inflate scores without predicting
+                  behavior. Every assessment item places the learner inside a
+                  real sales conversation — they must choose a response, not a
+                  definition.
+                </p>
+              </div>
+            </div>
+            <div class="decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon">02</div>
+              <div>
+                <h3 class="decision__title">Weighted rubric scoring</h3>
+                <p class="decision__body">
+                  Rather than binary correct/wrong, a four-point rubric captures
+                  <em>degree</em> of application. This produces richer data for
+                  cohort analysis and flags learners who are close — not just
+                  those who failed.
+                </p>
+              </div>
+            </div>
+            <div class="decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon">03</div>
+              <div>
+                <h3 class="decision__title">Pre/post design for gain scores</h3>
+                <p class="decision__body">
+                  Administering the same scenario set before and after training
+                  isolates the effect of the intervention. Gain scores prevent
+                  high prior-knowledge learners from skewing overall results and
+                  expose where training added the least lift.
+                </p>
+              </div>
+            </div>
+            <div class="decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon">04</div>
+              <div>
+                <h3 class="decision__title">
+                  L3 tied to observable behavior, not self-report
+                </h3>
+                <p class="decision__body">
+                  Manager observation checklists — not self-assessments — anchor
+                  the L3 measurement. Calibration sessions ensured inter-rater
+                  reliability across 11 managers before data collection began.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Results ──────────────────────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">Results</h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+
+          <div class="results-row reveal" data-reveal="fade-up">
+            <div class="result-stat">
+              <p class="result-stat__num">+22 pts</p>
+              <p class="result-stat__label">
+                Average scenario assessment gain score (pre → post)
+              </p>
+            </div>
+            <div class="result-stat">
+              <p class="result-stat__num">78%</p>
+              <p class="result-stat__label">
+                Reps applying target behaviors at 45-day observation
+              </p>
+            </div>
+            <div class="result-stat">
+              <p class="result-stat__num">47</p>
+              <p class="result-stat__label">
+                Learners measured across 4 regional cohorts
+              </p>
+            </div>
+            <div class="result-stat">
+              <p class="result-stat__num">11</p>
+              <p class="result-stat__label">
+                Managers calibrated for L3 observation reliability
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── CTA ─────────────────────────────────────── -->
+        <section class="section section--cta reveal" data-reveal="fade-up">
+          <h2>Want to see the full evaluation plan?</h2>
+          <p>
+            The complete package — rubric, SurveyMonkey item bank, observation
+            checklist, and Tableau dashboard mockup — is available on request.
+          </p>
+          <a href="contact.html" class="btn btn--primary">Get in Touch</a>
+          <a href="portfolio.html" class="btn btn--ghost">Back to Portfolio</a>
+        </section>
+      </div>
+    </main>
+
+    <!-- ── Footer ───────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p>
+          &copy; <span id="footerYear"></span> Zacc Elliott. All rights
+          reserved.
+        </p>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+      // Scenario interaction
+      const radios = document.querySelectorAll(".scenario-radio");
+      const feedback = document.getElementById("scenarioFeedback");
+      const badge = document.getElementById("scenarioBadge");
+      const scoreEl = document.getElementById("feedbackScore");
+      const labelEl = document.getElementById("feedbackLabel");
+      const rationaleEl = document.getElementById("feedbackRationale");
+      const resetBtn = document.getElementById("scenarioReset");
+      const optionsEl = document.getElementById("scenarioOptions");
+
+      const scores = { a: 1, b: 4, c: 2, d: 1 };
+      const labels = {
+        a: "Passive",
+        b: "Exemplary",
+        c: "Developing",
+        d: "Passive",
+      };
+      const rationales = {
+        a: "Sending materials is low-risk but low-yield. It removes pressure while abandoning the diagnostic work needed to understand why switching feels off the table. A good next step only if deeper conversation is exhausted — not as an opener.",
+        b: "Correct. The prospect has stated a concern, but the real objection (timing, risk, politics?) is still unknown. Acknowledging first builds rapport; the clarifying question earns the right to problem-solve. This is the consult before the pitch.",
+        c: "ROI data and case studies are strong tools — but only after you understand what the buyer actually needs to hear. Jumping to data here signals you weren't listening, and risks confirming their impression that this is just a sales call.",
+        d: "Asking to expand the conversation before understanding the objection is premature. It may come across as pressure to involve decision-makers before the prospect is ready, which can accelerate a no.",
+      };
+
+      radios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          const val = radio.value;
+          const pts = scores[val];
+
+          // Update badge
+          badge.textContent = pts + " / 4";
+          badge.className =
+            "scenario-header__badge scenario-header__badge--" +
+            (pts === 4 ? "best" : pts >= 2 ? "mid" : "low");
+
+          // Style options
+          document.querySelectorAll(".scenario-option").forEach((opt) => {
+            opt.classList.remove(
+              "scenario-option--selected",
+              "scenario-option--best",
+              "scenario-option--wrong",
+            );
+          });
+          const selectedOpt = document.getElementById("opt-" + val);
+          selectedOpt.classList.add("scenario-option--selected");
+          selectedOpt.classList.add(
+            pts === 4 ? "scenario-option--best" : "scenario-option--wrong",
+          );
+
+          // Show best answer highlight
+          document
+            .getElementById("opt-b")
+            .classList.add("scenario-option--best");
+
+          // Populate feedback
+          scoreEl.textContent = pts + " / 4";
+          scoreEl.className =
+            "scenario-feedback__score scenario-feedback__score--" +
+            (pts === 4 ? "best" : pts >= 2 ? "mid" : "low");
+          labelEl.textContent = labels[val];
+          rationaleEl.textContent = rationales[val];
+
+          feedback.hidden = false;
+          feedback.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+          // Lock options
+          radios.forEach((r) => (r.disabled = true));
+        });
+      });
+
+      resetBtn.addEventListener("click", () => {
+        radios.forEach((r) => {
+          r.disabled = false;
+          r.checked = false;
+        });
+        document.querySelectorAll(".scenario-option").forEach((opt) => {
+          opt.classList.remove(
+            "scenario-option--selected",
+            "scenario-option--best",
+            "scenario-option--wrong",
+          );
+        });
+        feedback.hidden = true;
+        badge.textContent = "—";
+        badge.className = "scenario-header__badge";
+      });
+    </script>
+  </body>
+</html>
