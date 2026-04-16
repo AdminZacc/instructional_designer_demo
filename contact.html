@@ -66,15 +66,13 @@
               </ul>
             </div>
 
-            <!-- Contact form -->
-            <!-- NOTE: This form requires a backend or service (e.g. Formspree, Netlify Forms)
-               to actually send email. Replace the action URL below. -->
-            <form
-              id="contact-form"
-              action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST"
-              novalidate
-            >
+            <!-- Contact form — powered by Formspree Ajax -->
+            <div data-fs-success class="form-success" hidden>
+              <p>Thanks for reaching out! I'll get back to you shortly.</p>
+            </div>
+            <div data-fs-error class="form-error" hidden></div>
+
+            <form id="contact-form" novalidate>
               <div class="form-group">
                 <label for="name">Name <span aria-hidden="true">*</span></label>
                 <input
@@ -84,13 +82,13 @@
                   required
                   autocomplete="name"
                   placeholder="Jane Smith"
+                  data-fs-field
                 />
+                <span class="form-field-error" data-fs-error="name"></span>
               </div>
 
               <div class="form-group">
-                <label for="email"
-                  >Email <span aria-hidden="true">*</span></label
-                >
+                <label for="email">Email <span aria-hidden="true">*</span></label>
                 <input
                   type="email"
                   id="email"
@@ -98,7 +96,9 @@
                   required
                   autocomplete="email"
                   placeholder="jane@example.com"
+                  data-fs-field
                 />
+                <span class="form-field-error" data-fs-error="email"></span>
               </div>
 
               <div class="form-group">
@@ -108,27 +108,32 @@
                   id="subject"
                   name="subject"
                   placeholder="Project inquiry / Collaboration / Other"
+                  data-fs-field
                 />
               </div>
 
               <div class="form-group">
-                <label for="message"
-                  >Message <span aria-hidden="true">*</span></label
-                >
+                <label for="message">Message <span aria-hidden="true">*</span></label>
                 <textarea
                   id="message"
                   name="message"
                   required
                   placeholder="Tell me about your project or question…"
+                  data-fs-field
                 ></textarea>
+                <span class="form-field-error" data-fs-error="message"></span>
               </div>
 
-              <button type="submit" class="btn btn--primary">
+              <button type="submit" class="btn btn--primary" data-fs-submit-btn>
                 Send Message
               </button>
-
-              <p class="form-status" id="form-status" role="alert"></p>
             </form>
+
+            <script>
+              window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+              formspree('initForm', { formElement: '#contact-form', formId: 'xjgjyyop' });
+            </script>
+            <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
           </div>
         </section>
       </div>
