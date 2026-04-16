@@ -497,6 +497,12 @@ main {
   margin-bottom: 2rem;
 }
 
+.resume-cert-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted, var(--color-muted));
+  margin: 0.25rem 0 0;
+}
+
 /* =============================================
    Contact
    ============================================= */
