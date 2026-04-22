@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Train-the-Trainer Workshop | Zacc Elliott - Instructional Designer
+    </title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- ── Navigation ──────────────────────────── -->
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="../index.html" class="nav__logo"
+          >Zacc Elliott - Instructional Designer</a
+        >
+        <button
+          class="nav__toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ── Scroll progress ─────────────────────── -->
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress__bar" id="scrollBar"></div>
+    </div>
+
+    <main>
+      <div class="container">
+        <!-- ── Project Hero ───────────────────────── -->
+        <section class="project-hero">
+          <div class="project-hero__content">
+            <p class="project-hero__eyebrow">ILT · Facilitation Design</p>
+            <h1>Train-the-Trainer Workshop</h1>
+            <p class="project-hero__summary">
+              A full facilitation package — slide deck, facilitator guide,
+              participant workbook, and post-training survey — designed to build
+              internal training capacity across a distributed organization.
+              Trainers rated their confidence to deliver at 4.6 / 5 after a
+              single two-day session.
+            </p>
+            <div class="project-meta">
+              <span>Tools: PowerPoint, MS Forms</span>
+              <span>Format: 2-day ILT workshop</span>
+              <span>Audience: Internal subject-matter experts</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Snapshot ───────────────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Project Snapshot
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+
+          <div class="story-cards">
+            <article class="story-card reveal" data-reveal="fade-up">
+              <h3>Problem</h3>
+              <p>
+                A growing organization had deep subject-matter expertise sitting
+                in silos — but no structured way to transfer that knowledge.
+                Ad-hoc "shadow shifts" weren't producing consistent trainers,
+                and onboarding quality varied wildly by region.
+              </p>
+            </article>
+            <article class="story-card reveal" data-reveal="fade-up">
+              <h3>Design Goal</h3>
+              <p>
+                Equip a cohort of 18 internal SMEs to deliver a standardized
+                onboarding experience. The goal wasn't just content mastery — it
+                was building facilitation skill, handling participant pushback,
+                and managing group dynamics.
+              </p>
+            </article>
+            <article class="story-card reveal" data-reveal="fade-up">
+              <h3>Outcome</h3>
+              <p>
+                18 certified internal trainers deployed across 5 regional
+                offices. New-hire onboarding time-to-proficiency dropped by 34%
+                over two quarters. The facilitator guide was adopted as the
+                organization's standard training template.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── Deliverables ───────────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Package Deliverables
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+          <p class="section__lead reveal" data-reveal="fade-up">
+            Four interlocking documents — each designed to work independently
+            and together. An SME could pick up the facilitator guide on day one
+            and run the session without additional coaching.
+          </p>
+
+          <div class="ttt-deliverables reveal" data-reveal="fade-up">
+            <div class="ttt-card">
+              <div class="ttt-card__num">01</div>
+              <div class="ttt-card__body">
+                <h3 class="ttt-card__title">Slide Deck</h3>
+                <p class="ttt-card__desc">
+                  80-slide PowerPoint built for trainer use — not for reading
+                  aloud. Each slide pairs a minimal visual with a "say / do /
+                  ask" note in the speaker pane. Animations are intentional, not
+                  decorative.
+                </p>
+                <ul class="ttt-card__specs">
+                  <li>Modular structure — sections drop in or out by cohort</li>
+                  <li>
+                    Branded master template with accessibility-compliant
+                    contrast
+                  </li>
+                  <li>Facilitator cue annotations on 40% of slides</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="ttt-card">
+              <div class="ttt-card__num">02</div>
+              <div class="ttt-card__body">
+                <h3 class="ttt-card__title">Facilitator Guide</h3>
+                <p class="ttt-card__desc">
+                  A 60-page script-free guide organized by session segment. Each
+                  segment includes learning objectives, estimated time,
+                  facilitation moves, and anticipated participant questions with
+                  suggested responses.
+                </p>
+                <ul class="ttt-card__specs">
+                  <li>Segment-level timing with buffer notes</li>
+                  <li>Pushback scripts for 12 common objections</li>
+                  <li>Differentiation flags for mixed-experience cohorts</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="ttt-card">
+              <div class="ttt-card__num">03</div>
+              <div class="ttt-card__body">
+                <h3 class="ttt-card__title">Participant Workbook</h3>
+                <p class="ttt-card__desc">
+                  A 28-page print-ready workbook that follows the session arc.
+                  Guided notes, application exercises, and reflection prompts
+                  are sequenced so participants leave with a ready-to-use
+                  reference, not a binder of slides.
+                </p>
+                <ul class="ttt-card__specs">
+                  <li>Guided note scaffolds (not full transcripts)</li>
+                  <li>3 practice scenario exercises with coaching rubrics</li>
+                  <li>Personal action-planning template on final page</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="ttt-card">
+              <div class="ttt-card__num">04</div>
+              <div class="ttt-card__body">
+                <h3 class="ttt-card__title">Post-Training Survey</h3>
+                <p class="ttt-card__desc">
+                  A 12-item MS Forms survey measuring Kirkpatrick L1
+                  (satisfaction) and L2 confidence — not just "did you like it,"
+                  but "could you do it." Data fed directly into the L&amp;D
+                  team's quarterly review.
+                </p>
+                <ul class="ttt-card__specs">
+                  <li>Likert + open-response hybrid format</li>
+                  <li>
+                    Skill-confidence self-ratings across 6 facilitation
+                    competencies
+                  </li>
+                  <li>Auto-report via MS Forms analytics dashboard</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Interactive Agenda ─────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Workshop Agenda — Day 1
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+          <p class="section__lead reveal" data-reveal="fade-up">
+            Each block is color-coded by activity type. Click a block to see the
+            facilitation approach and learning objective for that segment.
+          </p>
+
+          <div class="agenda-shell reveal" data-reveal="fade-up">
+            <div class="agenda-legend">
+              <span class="agenda-legend__item agenda-legend__item--inst"
+                >Instruction</span
+              >
+              <span class="agenda-legend__item agenda-legend__item--appl"
+                >Application</span
+              >
+              <span class="agenda-legend__item agenda-legend__item--refl"
+                >Reflection</span
+              >
+              <span class="agenda-legend__item agenda-legend__item--break"
+                >Break</span
+              >
+            </div>
+
+            <div class="agenda-track" id="agendaTrack">
+              <button
+                class="agenda-block agenda-block--inst"
+                data-block="welcome"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">8:00 – 8:30</span>
+                <span class="agenda-block__title"
+                  >Welcome &amp; Norms Setting</span
+                >
+                <span class="agenda-block__dur">30 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-welcome" hidden>
+                <p class="agenda-detail__obj">
+                  <strong>Objective:</strong> Establish psychological safety and
+                  clarify the session's purpose as skill-building, not auditing.
+                </p>
+                <p class="agenda-detail__approach">
+                  <strong>Facilitation approach:</strong> Paired introductions →
+                  whole-group norm building → facilitator shares personal
+                  learning story. Avoid long facilitator monologue; get
+                  participants talking within the first 5 minutes.
+                </p>
+              </div>
+
+              <button
+                class="agenda-block agenda-block--inst"
+                data-block="adult"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">8:30 – 9:30</span>
+                <span class="agenda-block__title"
+                  >Adult Learning Principles</span
+                >
+                <span class="agenda-block__dur">60 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-adult" hidden>
+                <p class="agenda-detail__obj">
+                  <strong>Objective:</strong> Learners can name and apply the
+                  four andragogy principles to a real training scenario they
+                  will facilitate.
+                </p>
+                <p class="agenda-detail__approach">
+                  <strong>Facilitation approach:</strong> Concept-first
+                  mini-lecture (12 min max) → paired application exercise using
+                  a real course excerpt → gallery walk debrief. Avoid theory
+                  overload — anchor every principle to a concrete example from
+                  their own subject matter.
+                </p>
+              </div>
+
+              <button
+                class="agenda-block agenda-block--break"
+                data-block="break1"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">9:30 – 9:45</span>
+                <span class="agenda-block__title">Break</span>
+                <span class="agenda-block__dur">15 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-break1" hidden>
+                <p class="agenda-detail__approach">
+                  Transition buffer. Facilitator resets the room and pre-loads
+                  the next activity. Remind participants of the 15-minute window
+                  — late returners disrupt momentum.
+                </p>
+              </div>
+
+              <button
+                class="agenda-block agenda-block--appl"
+                data-block="practice1"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">9:45 – 11:00</span>
+                <span class="agenda-block__title"
+                  >Micro-Teach Practice Round 1</span
+                >
+                <span class="agenda-block__dur">75 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-practice1" hidden>
+                <p class="agenda-detail__obj">
+                  <strong>Objective:</strong> Each participant delivers a
+                  5-minute segment of their assigned content and receives
+                  structured peer feedback.
+                </p>
+                <p class="agenda-detail__approach">
+                  <strong>Facilitation approach:</strong> Triads rotate — one
+                  teaches, one gives feedback with the rubric, one observes.
+                  Facilitator circulates, intervenes only to model a specific
+                  technique when a pattern emerges. Use the "warm / cool /
+                  wondering" protocol for feedback.
+                </p>
+              </div>
+
+              <button
+                class="agenda-block agenda-block--refl"
+                data-block="debrief1"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">11:00 – 11:30</span>
+                <span class="agenda-block__title">Whole-Group Debrief</span>
+                <span class="agenda-block__dur">30 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-debrief1" hidden>
+                <p class="agenda-detail__obj">
+                  <strong>Objective:</strong> Surface patterns from micro-teach
+                  rounds and connect observations to adult learning principles
+                  covered in the morning.
+                </p>
+                <p class="agenda-detail__approach">
+                  <strong>Facilitation approach:</strong> Structured "what
+                  worked / what would you adjust" fishbowl. Facilitator
+                  synthesizes with a visual note-catcher on the whiteboard.
+                  Avoid giving answers — use questions to surface insights
+                  already in the room.
+                </p>
+              </div>
+
+              <button
+                class="agenda-block agenda-block--break"
+                data-block="lunch"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">11:30 – 12:30</span>
+                <span class="agenda-block__title">Lunch</span>
+                <span class="agenda-block__dur">60 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-lunch" hidden>
+                <p class="agenda-detail__approach">
+                  Unstructured break. Facilitator does not run activities during
+                  lunch. Optional: assign afternoon prep task in the workbook
+                  (p. 14) for those who want a head start.
+                </p>
+              </div>
+
+              <button
+                class="agenda-block agenda-block--inst"
+                data-block="manage"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">12:30 – 1:45</span>
+                <span class="agenda-block__title">Managing Group Dynamics</span>
+                <span class="agenda-block__dur">75 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-manage" hidden>
+                <p class="agenda-detail__obj">
+                  <strong>Objective:</strong> Learners can identify three common
+                  group-dynamic disruptions and choose an appropriate
+                  facilitation move for each.
+                </p>
+                <p class="agenda-detail__approach">
+                  <strong>Facilitation approach:</strong> Case study fishbowl —
+                  present a disruptive scenario, pairs develop a response, share
+                  with the group. Facilitator introduces the "acknowledge /
+                  redirect / re-engage" model after pairs have struggled
+                  productively with the cases.
+                </p>
+              </div>
+
+              <button
+                class="agenda-block agenda-block--appl"
+                data-block="practice2"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">1:45 – 3:00</span>
+                <span class="agenda-block__title"
+                  >Micro-Teach Practice Round 2</span
+                >
+                <span class="agenda-block__dur">75 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-practice2" hidden>
+                <p class="agenda-detail__obj">
+                  <strong>Objective:</strong> Apply the morning's adult learning
+                  principles and group-dynamics tools in a second facilitation
+                  attempt with a different peer group.
+                </p>
+                <p class="agenda-detail__approach">
+                  <strong>Facilitation approach:</strong> Same triad rotation
+                  but with new groups. Feedback rubric now includes a
+                  group-dynamics dimension. Facilitator intentionally plants one
+                  "resistant participant" behavior in one triad to give a safe
+                  rehearsal of that skill.
+                </p>
+              </div>
+
+              <button
+                class="agenda-block agenda-block--break"
+                data-block="break2"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">3:00 – 3:15</span>
+                <span class="agenda-block__title">Break</span>
+                <span class="agenda-block__dur">15 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-break2" hidden>
+                <p class="agenda-detail__approach">
+                  Transition buffer. Reset the space for reflection activity.
+                  Facilitator prepares the Day 1 close prompts on the
+                  whiteboard.
+                </p>
+              </div>
+
+              <button
+                class="agenda-block agenda-block--refl"
+                data-block="close"
+                aria-expanded="false"
+              >
+                <span class="agenda-block__time">3:15 – 4:00</span>
+                <span class="agenda-block__title"
+                  >Day 1 Close &amp; Planning</span
+                >
+                <span class="agenda-block__dur">45 min</span>
+                <span class="agenda-block__chevron" aria-hidden="true">›</span>
+              </button>
+              <div class="agenda-detail" id="detail-close" hidden>
+                <p class="agenda-detail__obj">
+                  <strong>Objective:</strong> Each participant identifies one
+                  specific facilitation behavior to focus on overnight and
+                  commits to a Day 2 intention.
+                </p>
+                <p class="agenda-detail__approach">
+                  <strong>Facilitation approach:</strong> Individual workbook
+                  reflection (p. 18–19) → partner share → whole-group lightning
+                  round of intentions. Close with the facilitator modeling
+                  vulnerability — share your own one-thing for improvement. This
+                  sets the tone for Day 2's coaching culture.
+                </p>
+              </div>
+            </div>
+            <!-- /agenda-track -->
+          </div>
+          <!-- /agenda-shell -->
+        </section>
+
+        <!-- ── Design Decisions ───────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">
+            Design Decisions
+          </h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+
+          <div class="decisions-grid">
+            <div class="decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon">01</div>
+              <div>
+                <h3 class="decision__title">Script-free facilitator guide</h3>
+                <p class="decision__body">
+                  A word-for-word script creates readers, not facilitators. The
+                  guide uses segment intentions, key questions, and facilitation
+                  moves — giving SMEs enough structure to feel confident without
+                  locking them into someone else's voice.
+                </p>
+              </div>
+            </div>
+            <div class="decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon">02</div>
+              <div>
+                <h3 class="decision__title">
+                  Micro-teach with structured feedback
+                </h3>
+                <p class="decision__body">
+                  Reading about facilitation doesn't build facilitation skill.
+                  Two full rounds of micro-teaching — with rubric-based peer
+                  feedback — ensure participants practice the actual behavior
+                  being developed, not just discuss it.
+                </p>
+              </div>
+            </div>
+            <div class="decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon">03</div>
+              <div>
+                <h3 class="decision__title">
+                  Workbook as field reference, not note-taking log
+                </h3>
+                <p class="decision__body">
+                  Participant workbooks are often just printed slides. This one
+                  is structured so that someone who missed the session could
+                  pick it up and run a segment — making it a durable performance
+                  support tool, not a souvenir.
+                </p>
+              </div>
+            </div>
+            <div class="decision reveal" data-reveal="fade-up">
+              <div class="ldp-decision__icon">04</div>
+              <div>
+                <h3 class="decision__title">
+                  Survey measures confidence, not just satisfaction
+                </h3>
+                <p class="decision__body">
+                  The post-training survey includes self-rated confidence across
+                  six facilitation competencies — a leading indicator of whether
+                  trainers will actually use what they learned, distinct from
+                  whether they enjoyed the session.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── Results ────────────────────────────── -->
+        <section class="section">
+          <h2 class="section__title reveal" data-reveal="fade-up">Results</h2>
+          <div class="section__divider reveal" data-reveal="fade-up"></div>
+
+          <div class="results-row reveal" data-reveal="fade-up">
+            <div class="result-stat">
+              <p class="result-stat__num">18</p>
+              <p class="result-stat__label">
+                Internal trainers certified across 5 regional offices
+              </p>
+            </div>
+            <div class="result-stat">
+              <p class="result-stat__num">4.6 / 5</p>
+              <p class="result-stat__label">
+                Average trainer confidence rating post-workshop
+              </p>
+            </div>
+            <div class="result-stat">
+              <p class="result-stat__num">−34%</p>
+              <p class="result-stat__label">
+                New-hire time-to-proficiency over two quarters post-launch
+              </p>
+            </div>
+            <div class="result-stat">
+              <p class="result-stat__num">1</p>
+              <p class="result-stat__label">
+                Facilitator guide adopted as the org-wide training standard
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── CTA ───────────────────────────────── -->
+        <section class="section section--cta reveal" data-reveal="fade-up">
+          <h2>Want to see the full package?</h2>
+          <p>
+            The complete facilitator guide, participant workbook, slide deck,
+            and post-training survey are available as samples on request.
+          </p>
+          <a href="../contact.html" class="btn btn--primary">Get in Touch</a>
+          <a href="../portfolio.html" class="btn btn--ghost"
+            >Back to Portfolio</a
+          >
+        </section>
+      </div>
+    </main>
+
+    <!-- ── Footer ─────────────────────────────────── -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <p>
+          &copy; <span id="footerYear"></span> Zacc Elliott. All rights
+          reserved.
+        </p>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="../index.html">Home</a>
+          <a href="../portfolio.html">Portfolio</a>
+          <a href="../about.html">About</a>
+          <a href="../contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="../main.js"></script>
+    <script>
+      // Agenda accordion
+      document.querySelectorAll(".agenda-block").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const key = btn.dataset.block;
+          const detail = document.getElementById("detail-" + key);
+          const isOpen = btn.getAttribute("aria-expanded") === "true";
+
+          // Close all
+          document.querySelectorAll(".agenda-block").forEach((b) => {
+            b.setAttribute("aria-expanded", "false");
+            b.classList.remove("agenda-block--open");
+          });
+          document.querySelectorAll(".agenda-detail").forEach((d) => {
+            d.hidden = true;
+          });
+
+          // Open clicked (if it was closed)
+          if (!isOpen) {
+            btn.setAttribute("aria-expanded", "true");
+            btn.classList.add("agenda-block--open");
+            detail.hidden = false;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
